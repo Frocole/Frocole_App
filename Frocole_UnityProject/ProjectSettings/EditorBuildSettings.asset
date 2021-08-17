@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/00_Persistent Data.unity
+    guid: e7a735e9ef8777f45ba8108503d740e2
+  - enabled: 1
+    path: Assets/Scenes/01_Start.unity
+    guid: 742339418b276e34ab9e6f1c5d564d43
+  - enabled: 1
+    path: Assets/Scenes/02_Login.unity
+    guid: 035af4169c36d5e4d9627dc4b8a25bbd
+  - enabled: 1
+    path: Assets/Scenes/03_CreateAccount.unity
+    guid: 501fe7f80f490794b86a76f44ac3c160
+  - enabled: 1
+    path: Assets/Scenes/04_SelectCourse.unity
+    guid: f4bb0e4651c0280448daefba96b8eb8e
+  - enabled: 1
+    path: Assets/Scenes/05_CourseSubscription.unity
+    guid: 03cf6f5858c49a54390193376ffd12f8
+  - enabled: 1
+    path: Assets/Scenes/06_InfoPage.unity
+    guid: fc85aa83b655cc049b460d989f248c6d
+  - enabled: 1
+    path: Assets/Scenes/C_01_Home.unity
+    guid: 0ccb715cc06594946b804b83cd44ee41
+  - enabled: 1
+    path: Assets/Scenes/C_02_Pick_IPF-RD.unity
+    guid: 6d7769293b5a18745a638ca93ecb09c5
+  - enabled: 1
+    path: Assets/Scenes/C_03_ProvideFeedback.unity
+    guid: 79f4974a4380aeb499515895ae4c42fd
+  - enabled: 1
+    path: Assets/Scenes/L_01_Home.unity
+    guid: 5a4b5b3e5cb0bac44b27385220bdc625
+  - enabled: 1
+    path: Assets/Scenes/L_02_ReviewGroup.unity
+    guid: 521743a38323efc4497d837bdcb0b964
+  - enabled: 1
+    path: Assets/Scenes/L_03_CreateGroup.unity
+    guid: d08c3433dd43b5042bf57c519130e722
+  - enabled: 1
+    path: Assets/Scenes/L_04_AddMembersToGroup.unity
+    guid: edca3a65f83329f4e8f586c6f50118af
+  - enabled: 1
+    path: Assets/Scenes/L_05_EditGroup.unity
+    guid: 66045f24f83783f47a0bc507a1cff746
+  - enabled: 1
+    path: Assets/Scenes/L_06_Pick_IPF-RD.unity
+    guid: f19a77a7b24bf8949bb4c05f952097f0
+  - enabled: 1
+    path: Assets/Scenes/L_07_ReviewFeedback.unity
+    guid: 308cb96e6a0a13b429c1cc092b974b21
+  m_configObjects: {}
