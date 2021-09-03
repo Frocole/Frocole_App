@@ -31,7 +31,7 @@ public class UserDataManager : MonoBehaviour
 
     /// <summary>
     /// to encrypt a password, I've made a function that's supposed to take a string, and return an (realistically irreversible) encrypted string.
-    /// I also feed it a "salt" string which is just the user's username, a hardcoded "pepper" string, and a hardcoded "cost" which i'll tweak based on performance.
+    /// I also feed it a "salt" string which is just the user's username, a hardcoded string, and a hardcoded "cost" which i'll tweak based on performance.
     /// </summary>
     public string Encrypt(string toEncrypt, string salt)
     {
