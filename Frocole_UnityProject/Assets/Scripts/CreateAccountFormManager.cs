@@ -1,41 +1,204 @@
-﻿using System;
+﻿#region Header
+
+/*
+    Feedback and Reflection in Online Collaborative Learning.
+
+    Copyright (C) 2021  Open University of the Netherlands
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+*/
+
+#endregion Header
+
+using System;
 using System.Collections;
 using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+/// <summary>
+/// Manager for create account forms.
+/// </summary>
 public class CreateAccountFormManager : MonoBehaviour
 {
-    public UserObject UserObject;
+    #region Fields
 
-    public InputField WebAdressInputfield;
-    public GameObject NoServerFoundNotification;
-
-    public InputField UserName;
-    public GameObject UserNameAlreadyExistNotification;
-
-    public Toggle SavePassword;
-
+    /// <summary>
+    /// Name of the nick.
+    /// </summary>
     public InputField NickName;
 
+    /// <summary>
+    /// The no server found notification.
+    /// </summary>
+    public GameObject NoServerFoundNotification;
+
+    /// <summary>
+    /// The first password.
+    /// </summary>
     public InputField Password1;
+
+    /// <summary>
+    /// The second password.
+    /// </summary>
     public InputField Password2;
+
+    /// <summary>
+    /// The passwords do not match notification.
+    /// </summary>
     public GameObject PasswordsDoNotMatchNotification;
 
+    /// <summary>
+    /// The save password.
+    /// </summary>
+    public Toggle SavePassword;
+
+    /// <summary>
+    /// The submit control.
+    /// </summary>
     public Button SubmitButton;
 
-    #region ChecklistItems
+    /// <summary>
+    /// Name of the user.
+    /// </summary>
+    public InputField UserName;
 
-    private bool _validUserName = false;
-    private bool _validNickName = false;
-    private bool _validPassword = false;
+    /// <summary>
+    /// The user name already exist notification.
+    /// </summary>
+    public GameObject UserNameAlreadyExistNotification;
 
+    /// <summary>
+    /// The user object.
+    /// </summary>
+    public UserObject UserObject;
+
+    /// <summary>
+    /// The web adress inputfield.
+    /// </summary>
+    public InputField WebAdressInputfield;
+
+    /// <summary>
+    /// The encrypted password.
+    /// </summary>
     private string _encryptedPassword;
 
-    #endregion
+    /// <summary>
+    /// True to valid nick name.
+    /// </summary>
+    private bool _validNickName = false;
 
+    /// <summary>
+    /// True to valid password.
+    /// </summary>
+    private bool _validPassword = false;
+
+    /// <summary>
+    /// True to valid user name.
+    /// </summary>
+    private bool _validUserName = false;
+
+    #endregion Fields
+
+    #region Methods
+
+    /// <summary>
+    /// Creates the user.
+    /// </summary>
+    public void CreateUser()
+    {
+        StartCoroutine(WebRequestCreateUser());
+    }
+
+    /// <summary>
+    /// Sets web adress.
+    /// </summary>
+    ///
+    /// <param name="newURL"> URL of the new. </param>
+    public void SetWebAdress(string newURL)
+    {
+        //PersistentData.Instance.SetWebAdress(newURL);
+        StartCoroutine(VerifyServer(newURL));
+    }
+
+    /// <summary>
+    /// Updates the button.
+    /// </summary>
+    public void UpdateButton()
+    {
+        SubmitButton.interactable = (_validUserName && _validNickName && _validPassword);
+    }
+
+    /// <summary>
+    /// Validates the nickname described by input.
+    /// </summary>
+    ///
+    /// <param name="input"> The input. </param>
+    public void ValidateNickname(string input)
+    {
+        _validNickName = (NickName.text != "");
+        UpdateButton();
+    }
+
+    /// <summary>
+    /// Validates the password described by input.
+    /// </summary>
+    ///
+    /// <param name="input"> The input. </param>
+    public void ValidatePassword(string input)
+    {
+        if (Password1.text == "" || Password2.text == "")
+        {
+            PasswordsDoNotMatchNotification.SetActive(false);
+            _validPassword = false;
+            UpdateButton();
+            return;
+        }
+        if (Password1.text == Password2.text && Password1.text != "") // overkill
+        {
+            _validPassword = true;
+            PasswordsDoNotMatchNotification.SetActive(false);
+            _encryptedPassword = PersistentData.Instance.LoginDataManager.Encrypt(Password1.text, UserName.text.ToLower());
+            UpdateButton();
+            return;
+        }
+        else
+        {
+            _validPassword = false;
+            PasswordsDoNotMatchNotification.SetActive(true);
+            UpdateButton();
+            return;
+        }
+    }
+
+    /// <summary>
+    /// Validates the username described by Username.
+    /// </summary>
+    ///
+    /// <param name="Username"> The username. </param>
+    public void ValidateUsername(string Username)
+    {
+        StartCoroutine(WebRequestValidateUsername());
+        return;
+    }
+
+    /// <summary>
+    /// Start is called just before any of the Update methods is called the first time.
+    /// </summary>
     private void Start()
     {
         UserName.onValueChanged.AddListener(ValidateUsername);
@@ -50,12 +213,15 @@ public class CreateAccountFormManager : MonoBehaviour
         UpdateButton();
     }
 
-    public void SetWebAdress(string newURL)
-    {
-        //PersistentData.Instance.SetWebAdress(newURL);
-        StartCoroutine(VerifyServer(newURL));
-    }
-
+    /// <summary>
+    /// Verify server.
+    /// </summary>
+    ///
+    /// <param name="newURL"> URL of the new. </param>
+    ///
+    /// <returns>
+    /// An IEnumerator.
+    /// </returns>
     IEnumerator VerifyServer(string newURL)
     {
         LoadingOverlay.AddLoader();
@@ -122,11 +288,59 @@ public class CreateAccountFormManager : MonoBehaviour
         LoadingOverlay.RemoveLoader();
     }
 
-    public void ValidateUsername(string Username)
+    /// <summary>
+    /// Web request create user.
+    /// </summary>
+    ///
+    /// <returns>
+    /// An IEnumerator.
+    /// </returns>
+    IEnumerator WebRequestCreateUser()
     {
-        StartCoroutine(WebRequestValidateUsername());
-        return;
+        LoadingOverlay.AddLoader();
+        yield return new WaitForEndOfFrame();
+
+        WWWForm form = new WWWForm();
+
+        form.AddField("username", UserName.text.ToLower());
+        form.AddField("nickname", NickName.text);
+        form.AddField("password", _encryptedPassword);
+
+        yield return new WaitForEndOfFrame();
+
+        string output = "";
+        using (UnityWebRequest WWW_ = UnityWebRequest.Post(PersistentData.WebAdress + "CreateUser.php", form))
+        {
+            yield return WWW_.SendWebRequest();
+
+            if (WWW_.result != UnityWebRequest.Result.Success)
+            {
+                Debug.Log(WWW_.error);
+                // If failed:
+            }
+            else
+            {
+                output = WWW_.downloadHandler.text;
+                Debug.Log(output);
+            }
+        }
+
+        //WWW www = new WWW(PersistentData.WebAdress + "CreateUser.php", form);
+        //yield return www;
+
+        PersistentData.Instance.LoginDataManager.StoreLoginData(UserName.text, _encryptedPassword, SavePassword.isOn);
+        PersistentData.Instance.LoginDataManager.NewAccount = true;
+        LoadingOverlay.RemoveLoader();
+        SceneManager.LoadScene("02_Login");
     }
+
+    /// <summary>
+    /// Web request validate username.
+    /// </summary>
+    ///
+    /// <returns>
+    /// An IEnumerator.
+    /// </returns>
     IEnumerator WebRequestValidateUsername()
     {
         LoadingOverlay.AddLoader();
@@ -168,86 +382,5 @@ public class CreateAccountFormManager : MonoBehaviour
         UpdateButton();
     }
 
-    public void ValidatePassword(string input)
-    {
-        if (Password1.text == "" || Password2.text == "")
-        {
-            PasswordsDoNotMatchNotification.SetActive(false);
-            _validPassword = false;
-            UpdateButton(); 
-            return;
-        }
-        if (Password1.text == Password2.text && Password1.text != "") // overkill
-        {
-            _validPassword = true;
-            PasswordsDoNotMatchNotification.SetActive(false);
-            _encryptedPassword = PersistentData.Instance.LoginDataManager.Encrypt(Password1.text, UserName.text.ToLower());
-            UpdateButton();
-            return;
-        }
-        else
-        {
-            _validPassword = false;
-            PasswordsDoNotMatchNotification.SetActive(true);
-            UpdateButton(); 
-            return;
-        }
-    }
-
-    public void ValidateNickname(string input)
-    {
-        _validNickName = (NickName.text != "");
-        UpdateButton();
-    }
-
-    public void UpdateButton()
-    {
-        SubmitButton.interactable = (_validUserName && _validNickName && _validPassword);
-    }
-
-    public void CreateUser()
-    {
-        StartCoroutine(WebRequestCreateUser());
-    }
-
-    IEnumerator WebRequestCreateUser()
-    {
-        LoadingOverlay.AddLoader();
-        yield return new WaitForEndOfFrame();
-
-        WWWForm form = new WWWForm();
-
-        form.AddField("username", UserName.text.ToLower());
-        form.AddField("nickname", NickName.text);
-        form.AddField("password", _encryptedPassword);
-
-        yield return new WaitForEndOfFrame();
-
-        string output = "";
-        using (UnityWebRequest WWW_ = UnityWebRequest.Post(PersistentData.WebAdress + "CreateUser.php", form))
-        {
-            yield return WWW_.SendWebRequest();
-
-            if (WWW_.result != UnityWebRequest.Result.Success)
-            {
-                Debug.Log(WWW_.error);
-                // If failed:
-            }
-            else
-            {
-                output = WWW_.downloadHandler.text;
-                Debug.Log(output);
-            }
-        }
-
-        //WWW www = new WWW(PersistentData.WebAdress + "CreateUser.php", form);
-        //yield return www;
-
-        
-
-        PersistentData.Instance.LoginDataManager.StoreLoginData(UserName.text, _encryptedPassword, SavePassword.isOn);
-        PersistentData.Instance.LoginDataManager.NewAccount = true;
-        LoadingOverlay.RemoveLoader();
-        SceneManager.LoadScene("02_Login");
-    }
+    #endregion Methods
 }

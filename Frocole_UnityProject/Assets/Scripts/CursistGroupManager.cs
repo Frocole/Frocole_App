@@ -1,29 +1,66 @@
-﻿using System.Collections;
+﻿#region Header
+
+/*
+    Feedback and Reflection in Online Collaborative Learning.
+
+    Copyright (C) 2021  Open University of the Netherlands
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+*/
+
+#endregion Header
+
+using System.Collections;
 using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
 
+/// <summary>
+/// Manager for cursist groups.
+/// </summary>
 public class CursistGroupManager : MonoBehaviour
 {
-    private UserDataManager _persistentLoginDataManager;
+    #region Fields
+
+    /// <summary>
+    /// The group nickname.
+    /// </summary>
     public Text GroupNickname;
+
+    /// <summary>
+    /// The no group found overlay.
+    /// </summary>
     public GameObject NoGroupFoundOverlay;
 
+    /// <summary>
+    /// Manager for persistent login data.
+    /// </summary>
+    private UserDataManager _persistentLoginDataManager;
 
+    #endregion Fields
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        //
-        _persistentLoginDataManager = PersistentData.Instance.LoginDataManager;
+    #region Methods
 
-        // fetch the group 
-        StartCoroutine(GetMyGroupInThisCourse());
-
-    }
-
-
+    /// <summary>
+    /// Gets my group in this course.
+    /// </summary>
+    ///
+    /// <returns>
+    /// my group in this course.
+    /// </returns>
     IEnumerator GetMyGroupInThisCourse()
     {
         LoadingOverlay.AddLoader();
@@ -48,7 +85,7 @@ public class CursistGroupManager : MonoBehaviour
                 output = WWW_.downloadHandler.text;
                 if (output == "")
                 {
-                    //The User is not in any group 
+                    //The User is not in any group
                     NoGroupFoundOverlay.SetActive(true);
                 }
                 else
@@ -73,4 +110,18 @@ public class CursistGroupManager : MonoBehaviour
         //WWW www = new WWW(PersistentData.WebAdress + "PP_GetGroup.php", form);
         //yield return www;
     }
+
+    /// <summary>
+    /// Start is called before the first frame update.
+    /// </summary>
+    void Start()
+    {
+        //
+        _persistentLoginDataManager = PersistentData.Instance.LoginDataManager;
+
+        // fetch the group
+        StartCoroutine(GetMyGroupInThisCourse());
+    }
+
+    #endregion Methods
 }

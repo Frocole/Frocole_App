@@ -1,23 +1,75 @@
-﻿using System.Collections;
+﻿#region Header
+
+/*
+    Feedback and Reflection in Online Collaborative Learning.
+
+    Copyright (C) 2021  Open University of the Netherlands
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+*/
+
+#endregion Header
+
+using System.Collections;
 using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.Networking;
 
+/// <summary>
+/// A manage all course buttons.
+/// </summary>
 public class ManageAllCourseButtons : MonoBehaviour
 {
-    private UserDataManager _persistentLoginDataManager;
-    public RootCourseObject RootCourseObject;
+    #region Fields
+
+    /// <summary>
+    /// The contentholder.
+    /// </summary>
     public GameObject Contentholder;
+
+    /// <summary>
+    /// The course selector prefab.
+    /// </summary>
     public GameObject CourseSelectorPrefab;
 
+    /// <summary>
+    /// The root course object.
+    /// </summary>
+    public RootCourseObject RootCourseObject;
+
+    /// <summary>
+    /// The offset.
+    /// </summary>
     private int YOffset = 122;
 
-    private void Start()
-    {
-        _persistentLoginDataManager = PersistentData.Instance.LoginDataManager;
-        StartCoroutine(RequestAllCourses());
-    }
+    /// <summary>
+    /// Manager for persistent login data.
+    /// </summary>
+    private UserDataManager _persistentLoginDataManager;
 
+    #endregion Fields
+
+    #region Methods
+
+    /// <summary>
+    /// Request all courses.
+    /// </summary>
+    ///
+    /// <returns>
+    /// An IEnumerator.
+    /// </returns>
     IEnumerator RequestAllCourses()
     {
         LoadingOverlay.AddLoader();
@@ -51,8 +103,6 @@ public class ManageAllCourseButtons : MonoBehaviour
 
         yield return new WaitForEndOfFrame();
 
-
-
         CourseSelector GO;
         int i = 0;
         Contentholder.GetComponent<RectTransform>().sizeDelta = new Vector2(0, YOffset * RootCourseObject.courses.Length);
@@ -62,7 +112,6 @@ public class ManageAllCourseButtons : MonoBehaviour
         foreach (CourseObject course in RootCourseObject.courses)
         {
             _persistentLoginDataManager.Subscriptions.Add(course.CourseID);
-
 
             //Debug.Log(course.CourseName);
             GO = GameObject.Instantiate(CourseSelectorPrefab, Contentholder.transform).GetComponent<CourseSelector>();
@@ -74,4 +123,15 @@ public class ManageAllCourseButtons : MonoBehaviour
         }
         LoadingOverlay.RemoveLoader();
     }
+
+    /// <summary>
+    /// Start is called just before any of the Update methods is called the first time.
+    /// </summary>
+    private void Start()
+    {
+        _persistentLoginDataManager = PersistentData.Instance.LoginDataManager;
+        StartCoroutine(RequestAllCourses());
+    }
+
+    #endregion Methods
 }

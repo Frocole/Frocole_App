@@ -1,24 +1,80 @@
-﻿using System.Collections;
+﻿#region Header
+
+/*
+    Feedback and Reflection in Online Collaborative Learning.
+
+    Copyright (C) 2021  Open University of the Netherlands
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+*/
+
+#endregion Header
+
+using System.Collections;
 using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.Networking;
 
+/// <summary>
+/// Manager for group member lists.
+/// </summary>
 public class GroupMemberListManager : MonoBehaviour
 {
-    private UserDataManager _persistentLoginDataManager;
-    public RootUserObject RootUserObject;
-    public RootUserObject RootUserObject_AlreadyInGroup;
+    #region Fields
+
+    /// <summary>
+    /// The contentholder.
+    /// </summary>
     public GameObject Contentholder;
+
+    /// <summary>
+    /// The root user object.
+    /// </summary>
+    public RootUserObject RootUserObject;
+
+    /// <summary>
+    /// Group the root user object already in belongs to.
+    /// </summary>
+    public RootUserObject RootUserObject_AlreadyInGroup;
+
+    /// <summary>
+    /// The user selector prefab.
+    /// </summary>
     public GameObject UserSelectorPrefab;
 
+    /// <summary>
+    /// The offset.
+    /// </summary>
     private int YOffset = 100;
 
-    private void Start()
-    {
-        _persistentLoginDataManager = PersistentData.Instance.LoginDataManager;
-        StartCoroutine(RequestAllUsers());
-    }
+    /// <summary>
+    /// Manager for persistent login data.
+    /// </summary>
+    private UserDataManager _persistentLoginDataManager;
 
+    #endregion Fields
+
+    #region Methods
+
+    /// <summary>
+    /// Request all users.
+    /// </summary>
+    ///
+    /// <returns>
+    /// An IEnumerator.
+    /// </returns>
     IEnumerator RequestAllUsers()
     {
         LoadingOverlay.AddLoader();
@@ -82,13 +138,10 @@ public class GroupMemberListManager : MonoBehaviour
         yield return new WaitForEndOfFrame();
 
         Debug.Log("SUBJECT ALREADY WITHIN GROUP {\"users\": " + output + "}");
-              
 
         GroupMemberEnlister GO;
         int i = 0;
         Contentholder.GetComponent<RectTransform>().sizeDelta = new Vector2(0, YOffset * (RootUserObject.users.Length + RootUserObject_AlreadyInGroup.users.Length));
-
-        
 
         foreach (UserObject user in RootUserObject_AlreadyInGroup.users)
         {
@@ -106,7 +159,7 @@ public class GroupMemberListManager : MonoBehaviour
 
             i++;
         }
-        
+
         foreach (UserObject user in RootUserObject.users)
         {
             if (user.UserID == _persistentLoginDataManager.UserData.UserID) continue;
@@ -125,4 +178,15 @@ public class GroupMemberListManager : MonoBehaviour
         }
         LoadingOverlay.RemoveLoader();
     }
+
+    /// <summary>
+    /// Start is called just before any of the Update methods is called the first time.
+    /// </summary>
+    private void Start()
+    {
+        _persistentLoginDataManager = PersistentData.Instance.LoginDataManager;
+        StartCoroutine(RequestAllUsers());
+    }
+
+    #endregion Methods
 }

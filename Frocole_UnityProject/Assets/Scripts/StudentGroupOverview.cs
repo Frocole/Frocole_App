@@ -1,27 +1,86 @@
-﻿using System.Collections;
+﻿#region Header
+
+/*
+    Feedback and Reflection in Online Collaborative Learning.
+
+    Copyright (C) 2021  Open University of the Netherlands
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+*/
+
+#endregion Header
+
+using System.Collections;
 using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
 
+/// <summary>
+/// A student group overview.
+/// </summary>
 public class StudentGroupOverview : MonoBehaviour
 {
-    private UserDataManager _persistentLoginDataManager;
-    public GameObject NoGroupOverlay;
+    #region Fields
+
+    /// <summary>
+    /// The gpfrd selector.
+    /// </summary>
+    public SubjectSelector GPFRDSelector;
+
+    /// <summary>
+    /// The loading overlay go.
+    /// </summary>
     public GameObject LoadingOverlayGO;
 
-    public RootUserObject RootUserObject; public RootGroupObject RootGroupObject;
-    public SubjectSelector GPFRDSelector;
+    /// <summary>
+    /// The no group overlay.
+    /// </summary>
+    public GameObject NoGroupOverlay;
+
+    /// <summary>
+    /// The root group object.
+    /// </summary>
+    public RootGroupObject RootGroupObject;
+
+    /// <summary>
+    /// The root user object.
+    /// </summary>
+    public RootUserObject RootUserObject;
+
+    /// <summary>
+    /// The toggle selfreflectionpublic.
+    /// </summary>
     public Toggle ToggleSelfreflectionpublic;
 
-    //private int YOffset = 500;
+    /// <summary>
+    /// Manager for persistent login data.
+    /// </summary>
+    private UserDataManager _persistentLoginDataManager;
 
-    private void Start()
-    {
-        _persistentLoginDataManager = PersistentData.Instance.LoginDataManager;
-        StartCoroutine(FindGroup());
-    }
+    #endregion Fields
 
+    #region Methods
+
+    /// <summary>
+    /// Searches for the first group.
+    /// </summary>
+    ///
+    /// <returns>
+    /// The found group.
+    /// </returns>
     IEnumerator FindGroup()
     {
         LoadingOverlay.AddLoader();
@@ -42,7 +101,6 @@ public class StudentGroupOverview : MonoBehaviour
 
             Debug.Log("FindGroup 3");
 
-
             if (WWW_.result != UnityWebRequest.Result.Success)
             {
                 Debug.Log("FindGroup 4a");
@@ -54,7 +112,7 @@ public class StudentGroupOverview : MonoBehaviour
             {
                 Debug.Log("FindGroup 4b");
                 output = WWW_.downloadHandler.text;
-                // If succesfull: 
+                // If succesfull:
                 RootGroupObject = JsonUtility.FromJson<RootGroupObject>("{\"groups\": " + output + "}");
 
                 if (output == "" || RootGroupObject.groups == null || RootGroupObject.groups.Length == 0)
@@ -77,6 +135,13 @@ public class StudentGroupOverview : MonoBehaviour
         LoadingOverlay.RemoveLoader();
     }
 
+    /// <summary>
+    /// Sets up the group subject selector.
+    /// </summary>
+    ///
+    /// <returns>
+    /// An IEnumerator.
+    /// </returns>
     IEnumerator SetUpGroupSubjectSelector()
     {
         LoadingOverlay.AddLoader();
@@ -101,7 +166,7 @@ public class StudentGroupOverview : MonoBehaviour
             else
             {
                 output = WWW_.downloadHandler.text;
-                // If succesfull: 
+                // If succesfull:
                 RootUserObject = JsonUtility.FromJson<RootUserObject>("{\"users\": " + output + "}");
 
                 yield return new WaitForEndOfFrame();
@@ -123,8 +188,19 @@ public class StudentGroupOverview : MonoBehaviour
             }
         }
 
-
-
         LoadingOverlay.RemoveLoader();
     }
+
+    //private int YOffset = 500;
+
+    /// <summary>
+    /// Start is called just before any of the Update methods is called the first time.
+    /// </summary>
+    private void Start()
+    {
+        _persistentLoginDataManager = PersistentData.Instance.LoginDataManager;
+        StartCoroutine(FindGroup());
+    }
+
+    #endregion Methods
 }

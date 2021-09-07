@@ -1,28 +1,91 @@
-﻿using System.Collections;
+﻿#region Header
+
+/*
+    Feedback and Reflection in Online Collaborative Learning.
+
+    Copyright (C) 2021  Open University of the Netherlands
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+*/
+
+#endregion Header
+
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+
 using UnityEngine;
 using UnityEngine.Networking;
 
+/// <summary>
+/// A manage feedback subject buttons.
+/// </summary>
 public class ManageFeedbackSubjectButtons : MonoBehaviour
 {
-    private UserDataManager _persistentLoginDataManager;
-    public GameObject NoGroupOverlay;
+    #region Fields
 
-    public RootUserObject RootUserObject; public RootGroupObject RootGroupObject;
+    /// <summary>
+    /// The contentholder.
+    /// </summary>
     public GameObject Contentholder;
-    public GameObject UserSelectorPrefab;
+
+    /// <summary>
+    /// True if is teacher, false if not.
+    /// </summary>
     public bool IsTeacher = false;
 
+    /// <summary>
+    /// The no group overlay.
+    /// </summary>
+    public GameObject NoGroupOverlay;
+
+    /// <summary>
+    /// The root group object.
+    /// </summary>
+    public RootGroupObject RootGroupObject;
+
+    /// <summary>
+    /// The root user object.
+    /// </summary>
+    public RootUserObject RootUserObject;
+
+    /// <summary>
+    /// The user selector prefab.
+    /// </summary>
+    public GameObject UserSelectorPrefab;
+
+    /// <summary>
+    /// The offset.
+    /// </summary>
     private int YOffset = 122;
 
-    private void Start()
-    {
-        _persistentLoginDataManager = PersistentData.Instance.LoginDataManager;
-        if (IsTeacher) StartCoroutine(RequestAllUsers());
-        else StartCoroutine(FindGroup());
-    }
+    /// <summary>
+    /// Manager for persistent login data.
+    /// </summary>
+    private UserDataManager _persistentLoginDataManager;
 
+    #endregion Fields
+
+    #region Methods
+
+    /// <summary>
+    /// Searches for the first group.
+    /// </summary>
+    ///
+    /// <returns>
+    /// The found group.
+    /// </returns>
     IEnumerator FindGroup()
     {
         LoadingOverlay.AddLoader();
@@ -59,10 +122,17 @@ public class ManageFeedbackSubjectButtons : MonoBehaviour
                 }
             }
         }
-        
+
         LoadingOverlay.RemoveLoader();
     }
 
+    /// <summary>
+    /// Request all users.
+    /// </summary>
+    ///
+    /// <returns>
+    /// An IEnumerator.
+    /// </returns>
     IEnumerator RequestAllUsers()
     {
         LoadingOverlay.AddLoader();
@@ -127,7 +197,6 @@ public class ManageFeedbackSubjectButtons : MonoBehaviour
             }
             if (user.UserID == _persistentLoginDataManager.UserData.UserID) nickname += " (ikzelf)";
 
-
             GO.ButtonLabel.text = nickname;
 
             GO.ThisSubject.SubjectName = nickname;
@@ -135,12 +204,22 @@ public class ManageFeedbackSubjectButtons : MonoBehaviour
             GO.ThisSubject.Contributors = contributors.ToArray();
             GO.ThisSubject.FeedbackType = SpiderGraph.FeedbackType.IPF_RD;
 
-
             GO.ThisSubject.Public = (user.Public == "1");
             i++;
 
-        }            
+        }
         LoadingOverlay.RemoveLoader();
-
     }
+
+    /// <summary>
+    /// Start is called just before any of the Update methods is called the first time.
+    /// </summary>
+    private void Start()
+    {
+        _persistentLoginDataManager = PersistentData.Instance.LoginDataManager;
+        if (IsTeacher) StartCoroutine(RequestAllUsers());
+        else StartCoroutine(FindGroup());
+    }
+
+    #endregion Methods
 }

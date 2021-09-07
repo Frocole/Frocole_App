@@ -1,26 +1,77 @@
-﻿using System.Collections;
+﻿#region Header
+
+/*
+    Feedback and Reflection in Online Collaborative Learning.
+
+    Copyright (C) 2021  Open University of the Netherlands
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+*/
+
+#endregion Header
+
+using System.Collections;
 using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.Networking;
 
+/// <summary>
+/// Manager for course subscribtions.
+/// </summary>
 public class CourseSubscribtionManager : MonoBehaviour
 {
-    private UserDataManager _persistentLoginDataManager;
-    public RootCourseObject RootCourseObject;
+    #region Fields
+
+    /// <summary>
+    /// The contentholder.
+    /// </summary>
     public GameObject Contentholder;
+
+    /// <summary>
+    /// The course selector prefab.
+    /// </summary>
     public GameObject CourseSelectorPrefab;
 
+    /// <summary>
+    /// The root course object.
+    /// </summary>
+    public RootCourseObject RootCourseObject;
+
+    /// <summary>
+    /// The offset.
+    /// </summary>
     private int YOffset = 100;
 
-    private void Start()
-    {
-        _persistentLoginDataManager = PersistentData.Instance.LoginDataManager;
-        StartCoroutine(RequestAllCourses());
-    }
+    /// <summary>
+    /// Manager for persistent login data.
+    /// </summary>
+    private UserDataManager _persistentLoginDataManager;
 
+    #endregion Fields
+
+    #region Methods
+
+    /// <summary>
+    /// Request all courses.
+    /// </summary>
+    ///
+    /// <returns>
+    /// An IEnumerator.
+    /// </returns>
     IEnumerator RequestAllCourses()
     {
-
         LoadingOverlay.AddLoader();
         // attempt to login
         WWWForm form = new WWWForm();
@@ -66,7 +117,16 @@ public class CourseSubscribtionManager : MonoBehaviour
         LoadingOverlay.RemoveLoader();
         //WWW www = new WWW(PersistentData.WebAdress + "GetAllSubscribableCourses.php", form);
         //yield return www;
-
-
     }
+
+    /// <summary>
+    /// Start is called just before any of the Update methods is called the first time.
+    /// </summary>
+    private void Start()
+    {
+        _persistentLoginDataManager = PersistentData.Instance.LoginDataManager;
+        StartCoroutine(RequestAllCourses());
+    }
+
+    #endregion Methods
 }

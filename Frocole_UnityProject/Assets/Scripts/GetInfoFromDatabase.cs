@@ -1,20 +1,61 @@
-﻿using System.Collections;
+﻿#region Header
+
+/*
+    Feedback and Reflection in Online Collaborative Learning.
+
+    Copyright (C) 2021  Open University of the Netherlands
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+*/
+
+#endregion Header
+
+using System.Collections;
 using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
 
+/// <summary>
+/// A get information from database.
+/// </summary>
 public class GetInfoFromDatabase : MonoBehaviour
 {
-    public Text infotext;
+    #region Fields
+
+    /// <summary>
+    /// The contentholder.
+    /// </summary>
     public RectTransform contentholder;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        StartCoroutine(DownloadInfoText());
-    }
+    /// <summary>
+    /// The infotext.
+    /// </summary>
+    public Text infotext;
 
+    #endregion Fields
+
+    #region Methods
+
+    /// <summary>
+    /// Downloads the information text.
+    /// </summary>
+    ///
+    /// <returns>
+    /// An IEnumerator.
+    /// </returns>
     public IEnumerator DownloadInfoText()
     {
         LoadingOverlay.AddLoader();
@@ -28,7 +69,6 @@ public class GetInfoFromDatabase : MonoBehaviour
             infotext.text += WWW.downloadHandler.text;
         }
 
-
         //Debug.Log("text : " + WWW.downloadHandler.text);
 
         WWW.Dispose();
@@ -36,4 +76,14 @@ public class GetInfoFromDatabase : MonoBehaviour
         contentholder.sizeDelta = new Vector2(contentholder.sizeDelta.x, infotext.preferredHeight + 50);
         LoadingOverlay.RemoveLoader();
     }
+
+    /// <summary>
+    /// Start is called before the first frame update.
+    /// </summary>
+    void Start()
+    {
+        StartCoroutine(DownloadInfoText());
+    }
+
+    #endregion Methods
 }

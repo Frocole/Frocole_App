@@ -1,23 +1,65 @@
-﻿using System.Collections;
+﻿#region Header
+
+/*
+    Feedback and Reflection in Online Collaborative Learning.
+
+    Copyright (C) 2021  Open University of the Netherlands
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+*/
+
+#endregion Header
+
+using System.Collections;
 using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.Networking;
 
+/// <summary>
+/// A teacher group overview.
+/// </summary>
 public class TeacherGroupOverview : MonoBehaviour
 {
-    private UserDataManager _persistentLoginDataManager;
-    public RootUserObject RootUserObject;
+    #region Fields
+
+    /// <summary>
+    /// The gpfrd selector.
+    /// </summary>
     public SubjectSelector GPFRDSelector;
 
-    //private int YOffset = 500;
+    /// <summary>
+    /// The root user object.
+    /// </summary>
+    public RootUserObject RootUserObject;
 
-    private void Start()
-    {
-        _persistentLoginDataManager = PersistentData.Instance.LoginDataManager;
-        StartCoroutine(SetUpGroupSubjectSelector());
-    }
+    /// <summary>
+    /// Manager for persistent login data.
+    /// </summary>
+    private UserDataManager _persistentLoginDataManager;
 
+    #endregion Fields
 
+    #region Methods
+
+    /// <summary>
+    /// Sets up the group subject selector.
+    /// </summary>
+    ///
+    /// <returns>
+    /// An IEnumerator.
+    /// </returns>
     IEnumerator SetUpGroupSubjectSelector()
     {
         LoadingOverlay.AddLoader();
@@ -69,4 +111,17 @@ public class TeacherGroupOverview : MonoBehaviour
 
         LoadingOverlay.RemoveLoader();
     }
+
+    //private int YOffset = 500;
+
+    /// <summary>
+    /// Start is called just before any of the Update methods is called the first time.
+    /// </summary>
+    private void Start()
+    {
+        _persistentLoginDataManager = PersistentData.Instance.LoginDataManager;
+        StartCoroutine(SetUpGroupSubjectSelector());
+    }
+
+    #endregion Methods
 }
