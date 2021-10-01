@@ -34,6 +34,7 @@ using UnityEngine.UI;
 public class LocaleDropdown : MonoBehaviour
 {
     // Based on https://docs.unity3d.com/Packages/com.unity.localization@0.4/manual/#4-add-a-locale-selection-menu
+    // Also see https://docs.unity3d.com/Packages/com.unity.localization@1.0/manual/QuickStartGuide.html#9-build-preview-and-configuration on how to build.
     // 
     public Dropdown dropdown;
 
