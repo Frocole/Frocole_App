@@ -228,15 +228,33 @@ public class CreateAccountFormManager : MonoBehaviour
         WWWForm form = new WWWForm();
 
         string output = "";
-        using (UnityWebRequest WWW_ = UnityWebRequest.Post(PersistentData.WebAdress + "CheckIfServerExists.php", form))
+
+#warning The POST url code has to be replaced by a method inserting a php script (and keep the query) and correcting the / as well.
+
+        // Example of such method:
+        // 
+        // public static Uri InsertScript(Uri baseUrl, String script) {
+        // 
+        //  String s = baseUrl.GetComponents(UriComponents.SchemeAndServer, UriFormat.UriEscaped);    // "https://frocole.ou.nl:81"
+        //  String p = baseUrl.GetComponents(UriComponents.Path, UriFormat.UriEscaped).TrimEnd('/');  // "frocole"
+        //  String q = baseUrl.GetComponents(UriComponents.Query, UriFormat.UriEscaped);              // "i=zuyd"
+        // 
+        //  Uri u = new Uri(new Uri(s), p + "/" + script + "?" + q);                                  // "https://frocole.ou.nl:81/frocole/CheckIfServerExists.php?i=zuyd"
+        // 
+        //  return u;
+        // }
+        //
+        // Usage:
+        // 
+        // InsertScript("https://frocole.ou.nl:81/frocole?i=zuyd","CheckIfServerExists.php");       // Parameter is either PersistentData.WebAddress or newURL.
+        
+        using (UnityWebRequest WWW_ = UnityWebRequest.Post(newURL.TrimEnd('/') + "/CheckIfServerExists.php", form))
         {
             yield return WWW_.SendWebRequest();
 
             if (WWW_.result != UnityWebRequest.Result.Success)
             {
-                Debug.Log(WWW_.error);
-                // If failed:
-
+                Debug.Log(WWW_.error); // If failed:
             }
             else
             {
@@ -244,47 +262,18 @@ public class CreateAccountFormManager : MonoBehaviour
             }
         }
 
-        //WWW www = new WWW(newURL + "CheckIfServerExists.php", form);
-        //yield return www;
         if (output == "This Frocole Server Exists.")
         {
-            PersistentData.Instance.SetWebAdress(newURL);
+            PersistentData.Instance.SetWebAdress(newURL.TrimEnd('/') + "/");
             NoServerFoundNotification.SetActive(false);
         }
         else
         {
-            output = "";
-            using (UnityWebRequest WWW_ = UnityWebRequest.Post(PersistentData.WebAdress + "/CheckIfServerExists.php", form))
-            {
-                yield return WWW_.SendWebRequest();
-
-                if (WWW_.result != UnityWebRequest.Result.Success)
-                {
-                    Debug.Log(WWW_.error);
-                    // If failed:
-
-                }
-                else
-                {
-                    output = WWW_.downloadHandler.text;
-                }
-            }
-
-            //www = new WWW(newURL + "/CheckIfServerExists.php", form);
-            //yield return www;
-
-            if (output == "This Frocole Server Exists.")
-            {
-                PersistentData.Instance.SetWebAdress(newURL + "/");
-                NoServerFoundNotification.SetActive(false);
-            }
-            else
-            {
-                // WrongAdressMessage
-                Debug.Log(" WrongAdress" + output);
-                NoServerFoundNotification.SetActive(true);
-            }
+            // WrongAdressMessage
+            Debug.Log(" WrongAdress" + output);
+            NoServerFoundNotification.SetActive(true);
         }
+ 
         LoadingOverlay.RemoveLoader();
     }
 

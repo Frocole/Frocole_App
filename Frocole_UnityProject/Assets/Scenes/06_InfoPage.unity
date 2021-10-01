@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -225,6 +225,7 @@ GameObject:
   - component: {fileID: 186263735}
   - component: {fileID: 186263737}
   - component: {fileID: 186263736}
+  - component: {fileID: 186263738}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -322,6 +323,45 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 186263734}
   m_CullTransparentMesh: 0
+--- !u!114 &186263738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 186263734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:45874e20ece930042971a614bcdec135
+    m_TableEntryReference:
+      m_KeyId: 362113868128256
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 186263736}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Text, UnityEngine.UI
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+  references:
+    version: 1
 --- !u!1001 &430878198
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -329,10 +369,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1769133077}
     m_Modifications:
+    - target: {fileID: 430878207, guid: a51fab3d638b051468098f512e0243c6, type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 367093387780096
+      objectReference: {fileID: 0}
     - target: {fileID: 1046470813, guid: a51fab3d638b051468098f512e0243c6, type: 3}
       propertyPath: Back
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 140374275929681685, guid: a51fab3d638b051468098f512e0243c6, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 263940813659714967, guid: a51fab3d638b051468098f512e0243c6, type: 3}
       propertyPath: m_Name
       value: UI_Bottom_Buttons
@@ -341,6 +389,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 359926857164815380, guid: a51fab3d638b051468098f512e0243c6, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 692620098579982916, guid: a51fab3d638b051468098f512e0243c6, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -596,6 +648,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
+    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -1157,8 +1210,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71268a1da964d0e40a415a4a8fe9909f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  infotext: {fileID: 186263736}
   contentholder: {fileID: 113334666}
+  infotext: {fileID: 186263736}
 --- !u!4 &1623904743
 Transform:
   m_ObjectHideFlags: 0
@@ -1308,6 +1361,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
+    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -1513,6 +1567,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
 --- !u!223 &2052649287
 Canvas:
   m_ObjectHideFlags: 0

@@ -335,7 +335,7 @@ public class LoginManager : MonoBehaviour
         WWWForm form = new WWWForm();
 
         string output = "";
-        using (UnityWebRequest WWW_ = UnityWebRequest.Post(newURL + "CheckIfServerExists.php", form))
+        using (UnityWebRequest WWW_ = UnityWebRequest.Post(newURL.TrimEnd('/') + "/CheckIfServerExists.php", form))
         {
             yield return WWW_.SendWebRequest();
 
@@ -349,74 +349,18 @@ public class LoginManager : MonoBehaviour
             }
         }
 
-        Debug.Log(output);
         if (output == "This Frocole Server Exists.")
         {
-            PersistentData.Instance.SetWebAdress(newURL);
+            PersistentData.Instance.SetWebAdress(newURL.TrimEnd('/') + "/");
             NoServerFoundNotification.SetActive(false);
         }
         else
         {
-            output = "";
-            using (UnityWebRequest WWW_ = UnityWebRequest.Post(newURL + "/CheckIfServerExists.php", form))
-            {
-                yield return WWW_.SendWebRequest();
-
-                if (WWW_.result != UnityWebRequest.Result.Success)
-                {
-                    Debug.Log(WWW_.error);
-                    // If failed:
-
-                }
-                else
-                {
-                    output = WWW_.downloadHandler.text;
-                }
-            }
-
-            //www = new WWW(newURL + "/CheckIfServerExists.php", form);
-            //yield return www;
-
-            if (output == "This Frocole Server Exists.")
-            {
-                PersistentData.Instance.SetWebAdress(newURL + "/");
-                NoServerFoundNotification.SetActive(false);
-            }
-            else
-            {
-                // WrongAdressMessage
-                Debug.Log(" WrongAdress" + output);
-                NoServerFoundNotification.SetActive(true);
-            }
-
-            Debug.Log(output);
-
+            // WrongAdressMessage
+            Debug.Log(" WrongAdress" + output);
+            NoServerFoundNotification.SetActive(true);
         }
 
-        //WWW www = new WWW(newURL + "CheckIfServerExists.php", form);
-        //yield return www;
-        //if (www.text == "This Frocole Server Exists.")
-        //{
-        //    PersistentData.Instance.SetWebAdress(newURL);
-        //    NoServerFoundNotification.SetActive(false);
-        //}
-        //else
-        //{
-        //    www = new WWW(newURL + "/CheckIfServerExists.php", form);
-        //    yield return www;
-
-        //    if (www.text == "This Frocole Server Exists.")
-        //    {
-        //        PersistentData.Instance.SetWebAdress(newURL + "/");
-        //        NoServerFoundNotification.SetActive(false);
-        //    }
-        //    else
-        //    {
-        //        // WrongAdressMessage
-        //        Debug.Log(" WrongAdress" + www.text);
-        //        NoServerFoundNotification.SetActive(true);
-        //    }
-        //}
         LoadingOverlay.RemoveLoader();
     }
 

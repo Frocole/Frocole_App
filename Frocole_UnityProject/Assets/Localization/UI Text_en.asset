@@ -1,0 +1,333 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: UI Text_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 45874e20ece930042971a614bcdec135, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 62314405888
+    m_Localized: go back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 188428738560
+    m_Localized: 'Something has gone wrong.
+
+      Press the button to retry the
+      connection.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 193046667264
+    m_Localized: loading...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 233664307200
+    m_Localized: reconnect
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2481748336640
+    m_Localized: info
+    m_Metadata:
+      m_Items: []
+  - m_Id: 359519473000448
+    m_Localized: account
+    m_Metadata:
+      m_Items: []
+  - m_Id: 359600934772736
+    m_Localized: logoff
+    m_Metadata:
+      m_Items: []
+  - m_Id: 359803653873664
+    m_Localized: my courses
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360236657041408
+    m_Localized: change
+    m_Metadata:
+      m_Items: []
+  - m_Id: 362113868128256
+    m_Localized: "EN: Deze app is bedacht en ontwikkeld door de Open Universiteit
+      (OU) om het feedback en reflectieproces te ondersteunen van groepen die samenwerken.
+      \r\n\r\nOp de bijbehorende website https://frocole.ou.nl is aanvullende informatie
+      te vinden waaronder handleidingen, workshopmaterialen en presentaties\r\n\r\nDe
+      vormgeving en ontwikkeling van de app zijn uitgevoerd door:  \r\n- Crasborn
+      Communicate Vormgevers   \r\n- XR Group    \r\n\r\nVoor vragen over de app
+      kunt u mailen naar frocole@ou.nl.   \r\n\r\nEr is alles aan gedaan om te zorgen
+      voor een veilige, toegankelijke en gebruiksvriendelijke app die het feedback
+      en reflectieproces van samenwerkende groepen ondersteund met als doel de samenwerking
+      tussen groepsleden te optimaliseren en veelvoorkomende problemen zoals meeliftgedrag
+      en uiteenlopende verwachtingen te voorkomen. Echter, de makers van de app kunnen
+      niet garanderen dat de app altijd foutloos functioneert. Mocht de app (tijdelijk)
+      niet naar behoren functioneren dan is de OU op geen enkele manier aansprakelijk
+      voor directe, indirecte, incidentele, toevallige of gevolgschade die ontstaat
+      door het gebruik van de app, ongeacht de wijze waarop deze schade is ontstaan.
+      \r\n\r\nOm gebruik te maken van deze app moet u verbinden met een Frocole web-adres.
+      Deze adressen worden door instituten of organisaties opgezet om het gebruik
+      van deze app in besloten kringen te faciliteren. als deze app u is aangereikt
+      door een instituut of organisatie, dan zou deze partij ook een bijbehorend
+      web-adres moeten kunnen aanreiken.\r\n\r\nBent u zelf ge\xEFnteresseerd in
+      het verstrekken van  Frocole web-adres? neemt u dan contact op met frocole@ou.nl
+      of kijkt u op https://frocole.ou.nl voor de nodige stappen.\r\n\r\nLET OP,
+      als u verbinding maakt met een Frocole web-adres, verbind u met derden. Het
+      is daarom belangrijk dat u de verstrekkende partij vertrouwd. Met het gebruik
+      van de app deelt u de volgende gegevens met derden: uw gebruikersnaam, alias,
+      deelname aan cursussen en groepen binnen de app, en uw gegeven feedback binnen
+      deze groepen. Uw wachtwoord wordt door de app meteen beveiligd (door middel
+      van onder andere SHA256 - hashing) en uw onbeveiligde wachtwoord wordt nergens
+      opgeslagen of gedeeld met derden.\" Er worden dus geen persoonsgegevens zoals
+      emailadres, geslacht of geboortejaar gevraagd en gedeeld. \r\n\r\n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 364703561441280
+    m_Localized: login
+    m_Metadata:
+      m_Items: []
+  - m_Id: 364905705922560
+    m_Localized: web-address
+    m_Metadata:
+      m_Items: []
+  - m_Id: 365439359803392
+    m_Localized: alias
+    m_Metadata:
+      m_Items: []
+  - m_Id: 365700463616000
+    m_Localized: user name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 365842231091200
+    m_Localized: password
+    m_Metadata:
+      m_Items: []
+  - m_Id: 366319777767424
+    m_Localized: repeat password
+    m_Metadata:
+      m_Items: []
+  - m_Id: 366438724034560
+    m_Localized: save password
+    m_Metadata:
+      m_Items: []
+  - m_Id: 366655007514624
+    m_Localized: create account
+    m_Metadata:
+      m_Items: []
+  - m_Id: 367093387780096
+    m_Localized: back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368737156489216
+    m_Localized: log in
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368930371297280
+    m_Localized: "log in failed. \ncheck your data"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 369113993732096
+    m_Localized: no server found at this web address.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 369416453382144
+    m_Localized: web address
+    m_Metadata:
+      m_Items: []
+  - m_Id: 369544656478208
+    m_Localized: user name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 369899058388992
+    m_Localized: password
+    m_Metadata:
+      m_Items: []
+  - m_Id: 369985293279232
+    m_Localized: save password
+    m_Metadata:
+      m_Items: []
+  - m_Id: 370091056848896
+    m_Localized: Your account has been created!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 373389298130944
+    m_Localized: courses
+    m_Metadata:
+      m_Items: []
+  - m_Id: 374691017154560
+    m_Localized: 'No group found.
+
+
+      Wellicht heb je jezelf net ingeschreven,
+      of heeft de docent je uit een bestaande groep gehaald. Meld je bij je docent
+      om aan een nieuwe of bestaande groep toegevoegd te worden.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 374922777616384
+    m_Localized: Select a diagram
+    m_Metadata:
+      m_Items: []
+  - m_Id: 375040570449920
+    m_Localized: Group feedback
+    m_Metadata:
+      m_Items: []
+  - m_Id: 375134959067136
+    m_Localized: Individual feedback
+    m_Metadata:
+      m_Items: []
+  - m_Id: 375255180402688
+    m_Localized: go back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 375387934318592
+    m_Localized: I want to share my self feedback
+    m_Metadata:
+      m_Items: []
+  - m_Id: 377387094794240
+    m_Localized: group
+    m_Metadata:
+      m_Items: []
+  - m_Id: 377572097155072
+    m_Localized: go back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 377872107331584
+    m_Localized: My feedback of the selected person
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378099937730560
+    m_Localized: Avarage group feedback of the selected person
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378294234669056
+    m_Localized: Self feedback of the selected person
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378573176856576
+    m_Localized: Select a criterium marker at he outermost circle of the diagram
+    m_Metadata:
+      m_Items: []
+  - m_Id: 378919831887872
+    m_Localized: go back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 379018481917952
+    m_Localized: 'EN: Sleep de slider naar de gewenste waarde in de parameter en
+      selecteer daarna een volgend criteriumbolletje om feedback te geven'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1029236286185472
+    m_Localized: group
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1029416121163776
+    m_Localized: go back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1029646463950848
+    m_Localized: add group
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1030741802246144
+    m_Localized: select a diagram
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1030881397071872
+    m_Localized: Group feedback
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1031088230785024
+    m_Localized: Individual feedback
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1031392745644032
+    m_Localized: go back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1031636321460224
+    m_Localized: group
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1032241043628032
+    m_Localized: group name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1032566265765888
+    m_Localized: add group
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1032659924574208
+    m_Localized: go back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1036099220299776
+    m_Localized: already exists!!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1036108732981248
+    m_Localized: student
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1038288512770048
+    m_Localized: go back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1038282594607104
+    m_Localized: more setttings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1038713492234240
+    m_Localized: group
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1039649417617408
+    m_Localized: group name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1040000967401472
+    m_Localized: rename group
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1040099533545472
+    m_Localized: go back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1040278718406656
+    m_Localized: group
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1040462818992128
+    m_Localized: go back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1041292989194240
+    m_Localized: My feedback on the selected person
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1041476091535360
+    m_Localized: Avarage group feedback on the selected person
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1041755067277312
+    m_Localized: Self feedback of the  selected person
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1042057313017856
+    m_Localized: 'EN: U kunt de gemiddelde feedback van de groep op die persoon uitlezen
+      en indien aangevinkt, de zelffeedback van de betreffende persoon'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1046226455388160
+    m_Localized: go back
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 1

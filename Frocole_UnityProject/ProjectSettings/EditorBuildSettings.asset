@@ -56,4 +56,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/L_07_ReviewFeedback.unity
     guid: 308cb96e6a0a13b429c1cc092b974b21
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: 8027ed9bd3383ab429c42a8d92a1f8fa, type: 2}
+    com.unity.localization.settings: {fileID: 11400000, guid: e72e2c3de344e5e48854ede198d8f0d5, type: 2}
