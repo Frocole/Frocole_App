@@ -1915,6 +1915,7 @@ GameObject:
   - component: {fileID: 2011438370}
   - component: {fileID: 2011438372}
   - component: {fileID: 2011438371}
+  - component: {fileID: 2011438373}
   m_Layer: 5
   m_Name: Legenda
   m_TagString: Untagged
@@ -1982,6 +1983,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2011438369}
   m_CullTransparentMesh: 0
+--- !u!114 &2011438373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2011438369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e42bdba1694646448c4197067c7b199, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _SpiderTranslationItems:
+  - localeKey: L07_Gemiddelde groepsfeedback op bovengenoemd persoon
+    target: {fileID: 52931524}
+  - localeKey: L07_Zelffeedback van bovengenoemd persoon
+    target: {fileID: 2044540135}
 --- !u!1 &2044540133
 GameObject:
   m_ObjectHideFlags: 0

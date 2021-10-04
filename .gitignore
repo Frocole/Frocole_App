@@ -45,3 +45,5 @@ Thumbs.db
 Windows/
 *.log
 Android/Frocole_01okt2021.apk
+*.apk
+Frocole_UnityProject/Logs/ApiUpdaterCheck.txt

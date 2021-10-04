@@ -56,8 +56,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 362113868128256
-    m_Localized: "NL: Deze app is bedacht en ontwikkeld door de Open Universiteit
-      (OU) om het feedback en reflectieproces te ondersteunen van groepen die samenwerken.
+    m_Localized: "Deze app is bedacht en ontwikkeld door de Open Universiteit (OU)
+      om het feedback en reflectieproces te ondersteunen van groepen die samenwerken.
       \r\n\r\nOp de bijbehorende website https://frocole.ou.nl is aanvullende informatie
       te vinden waaronder handleidingen, workshopmaterialen en presentaties\r\n\r\nDe
       vormgeving en ontwikkeling van de app zijn uitgevoerd door:  \r\n- Crasborn
@@ -218,8 +218,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 379018481917952
-    m_Localized: 'NL: Sleep de slider naar de gewenste waarde in de parameter en
-      selecteer daarna een volgend criteriumbolletje om feedback te geven'
+    m_Localized: Sleep de slider naar de gewenste waarde in de parameter en selecteer
+      daarna een volgend criteriumbolletje om feedback te geven
     m_Metadata:
       m_Items: []
   - m_Id: 1029236286185472
@@ -319,12 +319,28 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1042057313017856
-    m_Localized: 'NL: U kunt de gemiddelde feedback van de groep op die persoon uitlezen
-      en indien aangevinkt, de zelffeedback van de betreffende persoon'
+    m_Localized: U kunt de gemiddelde feedback van de groep op die persoon uitlezen
+      en indien aangevinkt, de zelffeedback van de betreffende persoon
     m_Metadata:
       m_Items: []
   - m_Id: 1046226455388160
     m_Localized: ga terug
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2231072804462592
+    m_Localized: Gemiddelde groepsfeedback op bovengenoemd groep
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2231077263007744
+    m_Localized: Gemiddelde groepsfeedback op bovengenoemd persoon
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2234126668816384
+    m_Localized: Zelffeedback van bovengenoemd groep
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2234160542015488
+    m_Localized: Zelffeedback van bovengenoemd persoon
     m_Metadata:
       m_Items: []
   references:

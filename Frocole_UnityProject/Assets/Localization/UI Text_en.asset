@@ -58,36 +58,35 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 362113868128256
-    m_Localized: "EN: Deze app is bedacht en ontwikkeld door de Open Universiteit
-      (OU) om het feedback en reflectieproces te ondersteunen van groepen die samenwerken.
-      \r\n\r\nOp de bijbehorende website https://frocole.ou.nl is aanvullende informatie
-      te vinden waaronder handleidingen, workshopmaterialen en presentaties\r\n\r\nDe
-      vormgeving en ontwikkeling van de app zijn uitgevoerd door:  \r\n- Crasborn
-      Communicate Vormgevers   \r\n- XR Group    \r\n\r\nVoor vragen over de app
-      kunt u mailen naar frocole@ou.nl.   \r\n\r\nEr is alles aan gedaan om te zorgen
-      voor een veilige, toegankelijke en gebruiksvriendelijke app die het feedback
-      en reflectieproces van samenwerkende groepen ondersteund met als doel de samenwerking
-      tussen groepsleden te optimaliseren en veelvoorkomende problemen zoals meeliftgedrag
-      en uiteenlopende verwachtingen te voorkomen. Echter, de makers van de app kunnen
-      niet garanderen dat de app altijd foutloos functioneert. Mocht de app (tijdelijk)
-      niet naar behoren functioneren dan is de OU op geen enkele manier aansprakelijk
-      voor directe, indirecte, incidentele, toevallige of gevolgschade die ontstaat
-      door het gebruik van de app, ongeacht de wijze waarop deze schade is ontstaan.
-      \r\n\r\nOm gebruik te maken van deze app moet u verbinden met een Frocole web-adres.
-      Deze adressen worden door instituten of organisaties opgezet om het gebruik
-      van deze app in besloten kringen te faciliteren. als deze app u is aangereikt
-      door een instituut of organisatie, dan zou deze partij ook een bijbehorend
-      web-adres moeten kunnen aanreiken.\r\n\r\nBent u zelf ge\xEFnteresseerd in
-      het verstrekken van  Frocole web-adres? neemt u dan contact op met frocole@ou.nl
-      of kijkt u op https://frocole.ou.nl voor de nodige stappen.\r\n\r\nLET OP,
-      als u verbinding maakt met een Frocole web-adres, verbind u met derden. Het
-      is daarom belangrijk dat u de verstrekkende partij vertrouwd. Met het gebruik
-      van de app deelt u de volgende gegevens met derden: uw gebruikersnaam, alias,
-      deelname aan cursussen en groepen binnen de app, en uw gegeven feedback binnen
-      deze groepen. Uw wachtwoord wordt door de app meteen beveiligd (door middel
-      van onder andere SHA256 - hashing) en uw onbeveiligde wachtwoord wordt nergens
-      opgeslagen of gedeeld met derden.\" Er worden dus geen persoonsgegevens zoals
-      emailadres, geslacht of geboortejaar gevraagd en gedeeld. \r\n\r\n"
+    m_Localized: "This app was conceived and developed by the Open University (OU)
+      to support the feedback and reflection process of groups working together.
+      \r\n\r\nAdditional information including manuals, workshop materials, and presentations
+      can be found on the associated website https://frocole.ou.nl\r\n\r\nThe formgiving
+      and implementation of the app were carried out by:  \r\n- Crasborn Communicatie
+      Vormgevers\r\n- XR Group    \r\n\r\nFor questions about the app, please email
+      frocole@ou.nl.   \r\n\r\nEvery effort has been made to provide a safe, accessible,
+      and user-friendly app that supports the feedback and reflection process of
+      collaborating groups with the goal of achieving productive social interaction
+      among group members and preventing common problems such as free-riding behavior
+      and differing expectations. However, the creators of the app cannot guarantee
+      that the app will always function flawlessly. Should the app (temporarily)
+      not function as it should, the OU is in no way liable for any direct, indirect,
+      incidental, accidental or consequential damage caused by the use of the app,
+      regardless of how such damage arose. \r\n\r\nTo use this app, you must connect
+      to a Frocole web address. These addresses are set up by institutes or organizations
+      to facilitate the use of this app in closed circles. if this app was provided
+      to you by an institute or organization, that party should also be able to provide
+      a corresponding web address.\r\n\r\nIf you are interested in providing Frocole
+      web address yourself, please contact frocole@ou.nl or visit https://frocole.ou.nl
+      for the necessary steps.\r\n\r\nPLEASE NOTE, when you connect to a Frocole
+      web address, you are connecting to third parties. It is therefore important
+      that you trust the providing party. By using the app, you are sharing the following
+      data with third parties: your username, alias, participation in courses and
+      groups within the app, and your feedback within these groups. Your password
+      is immediately secured by the app (by means of SHA256 - hashing, among others)
+      and your unsecured password is not stored anywhere or shared with third parties.\"
+      Thus, no personal data such as email address, gender or year of birth is requested
+      and shared. \r\n\r\n\r\n"
     m_Metadata:
       m_Items: []
   - m_Id: 364703561441280
@@ -127,11 +126,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 368737156489216
-    m_Localized: log in
+    m_Localized: login
     m_Metadata:
       m_Items: []
   - m_Id: 368930371297280
-    m_Localized: "log in failed. \ncheck your data"
+    m_Localized: "Login failed. \nCheck your data"
     m_Metadata:
       m_Items: []
   - m_Id: 369113993732096
@@ -155,7 +154,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 370091056848896
-    m_Localized: Your account has been created!
+    m_Localized: Your account has been created succesfully!
     m_Metadata:
       m_Items: []
   - m_Id: 373389298130944
@@ -166,9 +165,9 @@ MonoBehaviour:
     m_Localized: 'No group found.
 
 
-      Wellicht heb je jezelf net ingeschreven,
-      of heeft de docent je uit een bestaande groep gehaald. Meld je bij je docent
-      om aan een nieuwe of bestaande groep toegevoegd te worden.'
+      Perhaps you just signed up, or the instructor
+      pulled you from an existing group. Sign up with your instructor to be added
+      to a new or existing group.'
     m_Metadata:
       m_Items: []
   - m_Id: 374922777616384
@@ -200,7 +199,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 377872107331584
-    m_Localized: My feedback of the selected person
+    m_Localized: My feedback to the selected person
     m_Metadata:
       m_Items: []
   - m_Id: 378099937730560
@@ -212,7 +211,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 378573176856576
-    m_Localized: Select a criterium marker at he outermost circle of the diagram
+    m_Localized: Select a criterion dot on the outer circle of the diagram
     m_Metadata:
       m_Items: []
   - m_Id: 378919831887872
@@ -220,8 +219,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 379018481917952
-    m_Localized: 'EN: Sleep de slider naar de gewenste waarde in de parameter en
-      selecteer daarna een volgend criteriumbolletje om feedback te geven'
+    m_Localized: Drag the slider to the desired value in the parameter and then select
+      a next criterion dot to provide feedback
     m_Metadata:
       m_Items: []
   - m_Id: 1029236286185472
@@ -309,7 +308,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1041292989194240
-    m_Localized: My feedback on the selected person
+    m_Localized: "My feedback on the selected person\r"
     m_Metadata:
       m_Items: []
   - m_Id: 1041476091535360
@@ -317,16 +316,32 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1041755067277312
-    m_Localized: Self feedback of the  selected person
+    m_Localized: Self-feedback of the selected person
     m_Metadata:
       m_Items: []
   - m_Id: 1042057313017856
-    m_Localized: 'EN: U kunt de gemiddelde feedback van de groep op die persoon uitlezen
-      en indien aangevinkt, de zelffeedback van de betreffende persoon'
+    m_Localized: You can read out the group's average feedback on that person and
+      if checked, that person's self-feedback
     m_Metadata:
       m_Items: []
   - m_Id: 1046226455388160
     m_Localized: go back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2231072804462592
+    m_Localized: Avarage group feedback on the selected group
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2231077263007744
+    m_Localized: Avarage group feedback on the selected person
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2234160542015488
+    m_Localized: Self-feedback of the selected person
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2234126668816384
+    m_Localized: Self-feedback of the selected group
     m_Metadata:
       m_Items: []
   references:
