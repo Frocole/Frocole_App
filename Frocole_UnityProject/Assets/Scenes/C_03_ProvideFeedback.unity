@@ -894,6 +894,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e42bdba1694646448c4197067c7b199, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _SpiderTranslationItems: []
 --- !u!1 &1825959887
 GameObject:
   m_ObjectHideFlags: 0
@@ -1000,6 +1001,7 @@ GameObject:
   - component: {fileID: 1862983152}
   - component: {fileID: 1862983154}
   - component: {fileID: 1862983153}
+  - component: {fileID: 1862983155}
   m_Layer: 5
   m_Name: Legenda
   m_TagString: Untagged
@@ -1067,6 +1069,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1862983151}
   m_CullTransparentMesh: 0
+--- !u!114 &1862983155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1862983151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e42bdba1694646448c4197067c7b199, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _SpiderTranslationItems:
+  - localeKey: C03_L1
+    target: {fileID: 1221044301}
+  - localeKey: C03_L2
+    target: {fileID: 237675806}
+  - localeKey: C03_L3
+    target: {fileID: 1109305925}
 --- !u!114 &1899576407 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6903693860111320418, guid: 66ba294e21a062f4990bacf2f137691e, type: 3}

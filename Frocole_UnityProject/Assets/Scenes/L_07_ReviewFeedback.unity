@@ -1996,9 +1996,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _SpiderTranslationItems:
-  - localeKey: L07_Gemiddelde groepsfeedback op bovengenoemd persoon
+  - localeKey: L07_L2
     target: {fileID: 52931524}
-  - localeKey: L07_Zelffeedback van bovengenoemd persoon
+  - localeKey: L07_L3
     target: {fileID: 2044540135}
 --- !u!1 &2044540133
 GameObject:

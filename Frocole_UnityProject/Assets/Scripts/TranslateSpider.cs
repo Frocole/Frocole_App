@@ -33,13 +33,13 @@ using static SpiderGraph;
 
 /// <summary>
 /// This script allows to dynamically translate an array of Text objects. It uses the key from
-/// the Localization Tables with a '_{FeedbackType}' as suffix (so either a '_GPF_RD' or
-/// '_IPF_RD' suffix).
+/// the Localization Tables with a '{FeedbackType}_' as prefix (so either a 'GPF_RD_' or
+/// 'IPF_RD_' prefix).
 /// 
-/// In the IDE the Text objects are linked to the suffix-less keys in the _SpiderTranslationItems
+/// In the IDE the Text objects are linked to the prefix-less keys in the _SpiderTranslationItems
 /// array.
 /// 
-/// This solution is ment for screens C_07 and C)03.
+/// This solution is meant for screens C_07 and C_03.
 /// </summary>
 public class TranslateSpider : MonoBehaviour
 {
@@ -85,7 +85,7 @@ public class TranslateSpider : MonoBehaviour
         {
             // Look-up the FeedbackType dependent key and apply it to the Text object.
             // 
-            item.target.text = getString(item.localeKey + $"_{MyFeedbackType}");
+            item.target.text = getString($"{MyFeedbackType}_"+item.localeKey);
         }
     }
 }

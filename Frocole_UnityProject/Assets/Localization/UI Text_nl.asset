@@ -343,5 +343,29 @@ MonoBehaviour:
     m_Localized: Zelffeedback van bovengenoemd persoon
     m_Metadata:
       m_Items: []
+  - m_Id: 2514021546352640
+    m_Localized: Mijn feedback op bovengenoemd persoon
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2514143185362944
+    m_Localized: Gemiddelde groepsfeedback op bovengenoemd persoon
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2514197832949760
+    m_Localized: Zelffeedback van bovengenoemd persoon
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2514572371714048
+    m_Localized: Feedback van bovengenoemd persoon op de groep
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2514608308510720
+    m_Localized: Gemiddelde groepsfeedback op de groep
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2514628646690816
+    m_Localized: Mijn feedback op de groep
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

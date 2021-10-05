@@ -344,5 +344,29 @@ MonoBehaviour:
     m_Localized: Self-feedback of the selected group
     m_Metadata:
       m_Items: []
+  - m_Id: 2514021546352640
+    m_Localized: My feedback to the selected person
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2514143185362944
+    m_Localized: Avarage group feedback of the selected person
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2514197832949760
+    m_Localized: Self feedback of the selected person
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2514572371714048
+    m_Localized: Selected person's feedback on the group
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2514608308510720
+    m_Localized: Avarage goup feedback on the group
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2514628646690816
+    m_Localized: My feedback on the group
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
