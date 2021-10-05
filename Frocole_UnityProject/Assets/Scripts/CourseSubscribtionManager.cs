@@ -77,7 +77,7 @@ public class CourseSubscribtionManager : MonoBehaviour
         WWWForm form = new WWWForm();
 
         string output;
-        using (UnityWebRequest WWW_ = UnityWebRequest.Post(PersistentData.WebAdress + "GetAllSubscribableCourses.php", form))
+        using (UnityWebRequest WWW_ = UnityWebRequest.Post(UriMaker.InsertScriptInUri(PersistentData.WebAdress, "GetAllSubscribableCourses.php"), form))
         {
             yield return WWW_.SendWebRequest();
 

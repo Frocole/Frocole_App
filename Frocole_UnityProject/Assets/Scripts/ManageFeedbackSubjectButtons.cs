@@ -96,7 +96,7 @@ public class ManageFeedbackSubjectButtons : MonoBehaviour
         form.AddField("courseid", _persistentLoginDataManager.CourseData.CourseID);
 
         string output = "";
-        using (UnityWebRequest WWW_ = UnityWebRequest.Post(PersistentData.WebAdress + "PP_GetGroup.php", form))
+        using (UnityWebRequest WWW_ = UnityWebRequest.Post(UriMaker.InsertScriptInUri(PersistentData.WebAdress, "PP_GetGroup.php"), form))
         {
             yield return WWW_.SendWebRequest();
 
@@ -146,7 +146,7 @@ public class ManageFeedbackSubjectButtons : MonoBehaviour
         Debug.Log($"{_persistentLoginDataManager.Username } {_persistentLoginDataManager.Password}{_persistentLoginDataManager.GroupData.GroupID}{_persistentLoginDataManager.CourseData.CourseID}");
 
         string output = "";
-        using (UnityWebRequest WWW_ = UnityWebRequest.Post(PersistentData.WebAdress + "PP_GetAllSubjectsInMyGroup.php", form))
+        using (UnityWebRequest WWW_ = UnityWebRequest.Post(UriMaker.InsertScriptInUri(PersistentData.WebAdress, "PP_GetAllSubjectsInMyGroup.php"), form))
         {
             yield return WWW_.SendWebRequest();
 

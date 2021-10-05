@@ -81,7 +81,7 @@ public class GroupSelectionManager : MonoBehaviour
         form.AddField("courseid", _persistentLoginDataManager.CourseData.CourseID);
 
         string output = "";
-        using (UnityWebRequest WWW_ = UnityWebRequest.Post(PersistentData.WebAdress + "PP_GetAllGroupsInCourse.php", form))
+        using (UnityWebRequest WWW_ = UnityWebRequest.Post(UriMaker.InsertScriptInUri(PersistentData.WebAdress, "PP_GetAllGroupsInCourse.php"), form))
         {
             yield return WWW_.SendWebRequest();
 

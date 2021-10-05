@@ -96,7 +96,7 @@ public class GroupMemberEnlister : MonoBehaviour
         form.AddField("groupid", _persistentLoginDataManager.GroupData.GroupID);
 
         string output = "";
-        using (UnityWebRequest WWW_ = UnityWebRequest.Post(PersistentData.WebAdress + "PP_DelistUser.php", form))
+        using (UnityWebRequest WWW_ = UnityWebRequest.Post(UriMaker.InsertScriptInUri(PersistentData.WebAdress, "PP_DelistUser.php"), form))
         {
             yield return WWW_.SendWebRequest();
 
@@ -139,7 +139,7 @@ public class GroupMemberEnlister : MonoBehaviour
 
         string output = "";
 
-        using (UnityWebRequest WWW_ = UnityWebRequest.Post(PersistentData.WebAdress + "PP_EnlistUser.php", form))
+        using (UnityWebRequest WWW_ = UnityWebRequest.Post(UriMaker.InsertScriptInUri(PersistentData.WebAdress, "PP_EnlistUser.php"), form))
         {
             yield return WWW_.SendWebRequest();
 

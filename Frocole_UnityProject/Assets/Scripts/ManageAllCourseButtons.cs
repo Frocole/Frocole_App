@@ -80,7 +80,7 @@ public class ManageAllCourseButtons : MonoBehaviour
         form.AddField("password", _persistentLoginDataManager.Password);
 
         string output = "";
-        using (UnityWebRequest WWW_ = UnityWebRequest.Post(PersistentData.WebAdress + "PP_GetAllMySubScribedCourses.php", form))
+        using (UnityWebRequest WWW_ = UnityWebRequest.Post(UriMaker.InsertScriptInUri(PersistentData.WebAdress, "PP_GetAllMySubScribedCourses.php"), form))
         {
             yield return WWW_.SendWebRequest();
 

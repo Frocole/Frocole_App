@@ -178,7 +178,7 @@ public class FeedbackSubmitter : MonoBehaviour
         form.AddField("groupid", _persistentLoginDataManager.GroupData.GroupID);
 
         string output = "";
-        using (UnityWebRequest WWW_ = UnityWebRequest.Post(PersistentData.WebAdress + "PP_SubmitFeedBack.php", form))
+        using (UnityWebRequest WWW_ = UnityWebRequest.Post(UriMaker.InsertScriptInUri(PersistentData.WebAdress, "PP_SubmitFeedBack.php"), form))
         {
             yield return WWW_.SendWebRequest();
 
@@ -217,7 +217,7 @@ public class FeedbackSubmitter : MonoBehaviour
         form.AddField("groupid", _persistentLoginDataManager.GroupData.GroupID);
 
         string output = "";
-        using (UnityWebRequest WWW_ = UnityWebRequest.Post(PersistentData.WebAdress + "PP_SubmitFeedBack.php", form))
+        using (UnityWebRequest WWW_ = UnityWebRequest.Post(UriMaker.InsertScriptInUri(PersistentData.WebAdress, "PP_SubmitFeedBack.php"), form))
         {
             yield return WWW_.SendWebRequest();
 

@@ -106,7 +106,7 @@ public class GroupCreator : MonoBehaviour
         form.AddField("groupnickname", InputField.text);
 
         string output = "";
-        using (UnityWebRequest WWW_ = UnityWebRequest.Post(PersistentData.WebAdress + "PP_CheckIfGroupWithNameExistsInCourse.php", form))
+        using (UnityWebRequest WWW_ = UnityWebRequest.Post(UriMaker.InsertScriptInUri(PersistentData.WebAdress, "PP_CheckIfGroupWithNameExistsInCourse.php"), form))
         {
             yield return WWW_.SendWebRequest();
 
@@ -159,7 +159,7 @@ public class GroupCreator : MonoBehaviour
         form.AddField("groupnickname", InputField.text);
 
         string output = "";
-        using (UnityWebRequest WWW_ = UnityWebRequest.Post(PersistentData.WebAdress + "PP_CreateGroup.php", form))
+        using (UnityWebRequest WWW_ = UnityWebRequest.Post(UriMaker.InsertScriptInUri(PersistentData.WebAdress, "PP_CreateGroup.php"), form))
         {
             yield return WWW_.SendWebRequest();
 

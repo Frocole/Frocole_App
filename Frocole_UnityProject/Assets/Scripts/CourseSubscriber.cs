@@ -99,7 +99,7 @@ public class CourseSubscriber : MonoBehaviour
         form.AddField("courseid", ThisCourse.CourseID);
 
         string output;
-        using (UnityWebRequest WWW_ = UnityWebRequest.Post(PersistentData.WebAdress + "PP_SubToCourse.php", form))
+        using (UnityWebRequest WWW_ = UnityWebRequest.Post(UriMaker.InsertScriptInUri(PersistentData.WebAdress, "PP_SubToCourse.php"), form))
         {
             yield return WWW_.SendWebRequest();
 
@@ -137,7 +137,7 @@ public class CourseSubscriber : MonoBehaviour
         form.AddField("courseid", ThisCourse.CourseID);
 
         string output;
-        using (UnityWebRequest WWW_ = UnityWebRequest.Post(PersistentData.WebAdress + "PP_UnsubCourse.php", form))
+        using (UnityWebRequest WWW_ = UnityWebRequest.Post(UriMaker.InsertScriptInUri(PersistentData.WebAdress, "PP_UnsubCourse.php"), form))
         {
             yield return WWW_.SendWebRequest();
 

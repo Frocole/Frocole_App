@@ -79,7 +79,7 @@ public class SetSelfReflectionPublic : MonoBehaviour
         form.AddField("public", "0");
 
         string output = "";
-        using (UnityWebRequest WWW_ = UnityWebRequest.Post(PersistentData.WebAdress + "PP_SetSelfReflectionPublic.php", form))
+        using (UnityWebRequest WWW_ = UnityWebRequest.Post(UriMaker.InsertScriptInUri(PersistentData.WebAdress, "PP_SetSelfReflectionPublic.php"), form))
         {
             yield return WWW_.SendWebRequest();
 
@@ -118,7 +118,7 @@ public class SetSelfReflectionPublic : MonoBehaviour
         form.AddField("public", "1");
 
         string output = "";
-        using (UnityWebRequest WWW_ = UnityWebRequest.Post(PersistentData.WebAdress + "PP_SetSelfReflectionPublic.php", form))
+        using (UnityWebRequest WWW_ = UnityWebRequest.Post(UriMaker.InsertScriptInUri(PersistentData.WebAdress, "PP_SetSelfReflectionPublic.php"), form))
         {
             yield return WWW_.SendWebRequest();
 

@@ -247,8 +247,8 @@ public class CreateAccountFormManager : MonoBehaviour
         // Usage:
         // 
         // InsertScript("https://frocole.ou.nl:81/frocole?i=zuyd","CheckIfServerExists.php");       // Parameter is either PersistentData.WebAddress or newURL.
-        
-        using (UnityWebRequest WWW_ = UnityWebRequest.Post(newURL.TrimEnd('/') + "/CheckIfServerExists.php", form))
+
+        using (UnityWebRequest WWW_ = UnityWebRequest.Post(UriMaker.InsertScriptInUri(newURL, "CheckIfServerExists.php"), form))
         {
             yield return WWW_.SendWebRequest();
 
@@ -264,7 +264,7 @@ public class CreateAccountFormManager : MonoBehaviour
 
         if (output == "This Frocole Server Exists.")
         {
-            PersistentData.Instance.SetWebAdress(newURL.TrimEnd('/') + "/");
+            PersistentData.Instance.SetWebAdress(newURL);
             NoServerFoundNotification.SetActive(false);
         }
         else
@@ -273,7 +273,7 @@ public class CreateAccountFormManager : MonoBehaviour
             Debug.Log(" WrongAdress" + output);
             NoServerFoundNotification.SetActive(true);
         }
- 
+
         LoadingOverlay.RemoveLoader();
     }
 
@@ -298,7 +298,7 @@ public class CreateAccountFormManager : MonoBehaviour
         yield return new WaitForEndOfFrame();
 
         string output = "";
-        using (UnityWebRequest WWW_ = UnityWebRequest.Post(PersistentData.WebAdress + "CreateUser.php", form))
+        using (UnityWebRequest WWW_ = UnityWebRequest.Post(UriMaker.InsertScriptInUri(PersistentData.WebAdress, "CreateUser.php"), form))
         {
             yield return WWW_.SendWebRequest();
 
@@ -338,7 +338,7 @@ public class CreateAccountFormManager : MonoBehaviour
         form.AddField("username", UserName.text.ToLower());
 
         string output = "";
-        using (UnityWebRequest WWW_ = UnityWebRequest.Post(PersistentData.WebAdress + "CheckIfUserNameExists.php", form))
+        using (UnityWebRequest WWW_ = UnityWebRequest.Post(UriMaker.InsertScriptInUri(PersistentData.WebAdress, "CheckIfUserNameExists.php"), form))
         {
             yield return WWW_.SendWebRequest();
 

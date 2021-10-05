@@ -198,7 +198,7 @@ public class LoginManager : MonoBehaviour
         form.AddField("password", _encryptedpassword);
 
         string output = "";
-        using (UnityWebRequest WWW_ = UnityWebRequest.Post(PersistentData.WebAdress + "PP_GetUser.php", form))
+        using (UnityWebRequest WWW_ = UnityWebRequest.Post(UriMaker.InsertScriptInUri(PersistentData.WebAdress, "PP_GetUser.php"), form))
         {
             yield return WWW_.SendWebRequest();
 
@@ -214,7 +214,7 @@ public class LoginManager : MonoBehaviour
             else
             {
                 output = WWW_.downloadHandler.text;
-                // If succesfull:
+                // If successful:
                 Debug.Log("LOGIN DATA {\"users\": " + output + "}");
                 var data = JsonUtility.FromJson<RootUserObject>("{\"users\": " + output + "}");
 
@@ -265,7 +265,7 @@ public class LoginManager : MonoBehaviour
         form.AddField("password", _password);
 
         string output = "";
-        using (UnityWebRequest WWW_ = UnityWebRequest.Post(PersistentData.WebAdress + "PP_GetUser.php", form))
+        using (UnityWebRequest WWW_ = UnityWebRequest.Post(UriMaker.InsertScriptInUri(PersistentData.WebAdress, "PP_GetUser.php"), form))
         {
             yield return WWW_.SendWebRequest();
 
@@ -335,7 +335,7 @@ public class LoginManager : MonoBehaviour
         WWWForm form = new WWWForm();
 
         string output = "";
-        using (UnityWebRequest WWW_ = UnityWebRequest.Post(newURL.TrimEnd('/') + "/CheckIfServerExists.php", form))
+        using (UnityWebRequest WWW_ = UnityWebRequest.Post(UriMaker.InsertScriptInUri(newURL, "CheckIfServerExists.php"), form))
         {
             yield return WWW_.SendWebRequest();
 
@@ -351,7 +351,7 @@ public class LoginManager : MonoBehaviour
 
         if (output == "This Frocole Server Exists.")
         {
-            PersistentData.Instance.SetWebAdress(newURL.TrimEnd('/') + "/");
+            PersistentData.Instance.SetWebAdress(newURL);
             NoServerFoundNotification.SetActive(false);
         }
         else

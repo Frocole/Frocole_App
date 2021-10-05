@@ -94,7 +94,7 @@ public class StudentGroupOverview : MonoBehaviour
         Debug.Log("FindGroup 1");
 
         string output = "";
-        using (UnityWebRequest WWW_ = UnityWebRequest.Post(PersistentData.WebAdress + "PP_GetGroup.php", form))
+        using (UnityWebRequest WWW_ = UnityWebRequest.Post(UriMaker.InsertScriptInUri(PersistentData.WebAdress, "PP_GetGroup.php"), form))
         {
             Debug.Log("FindGroup 2");
             yield return WWW_.SendWebRequest();
@@ -154,7 +154,7 @@ public class StudentGroupOverview : MonoBehaviour
         form.AddField("courseid", _persistentLoginDataManager.CourseData.CourseID);
 
         string output = "";
-        using (UnityWebRequest WWW_ = UnityWebRequest.Post(PersistentData.WebAdress + "PP_GetAllSubjectsInMyGroup.php", form))
+        using (UnityWebRequest WWW_ = UnityWebRequest.Post(UriMaker.InsertScriptInUri(PersistentData.WebAdress, "PP_GetAllSubjectsInMyGroup.php"), form))
         {
             yield return WWW_.SendWebRequest();
 

@@ -309,7 +309,7 @@ public class FillProfile : MonoBehaviour
         form.AddField("subject", UserDataManagerReference.SubjectData.SubjectID);
 
         string output = "";
-        using (UnityWebRequest WWW_ = UnityWebRequest.Post(PersistentData.WebAdress + "PP_GetFeedbackOnSubject.php", form))
+        using (UnityWebRequest WWW_ = UnityWebRequest.Post(UriMaker.InsertScriptInUri(PersistentData.WebAdress, "PP_GetFeedbackOnSubject.php"), form))
         {
             yield return WWW_.SendWebRequest();
 

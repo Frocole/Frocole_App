@@ -59,7 +59,7 @@ public class GetInfoFromDatabase : MonoBehaviour
     public IEnumerator DownloadInfoText()
     {
         LoadingOverlay.AddLoader();
-        UnityWebRequest WWW = UnityWebRequest.Get(PersistentData.WebAdress + "GetFrocoleInfo.php");
+        UnityWebRequest WWW = UnityWebRequest.Get(UriMaker.InsertScriptInUri(PersistentData.WebAdress, "GetFrocoleInfo.php"));
         yield return WWW.SendWebRequest();
 
         if (WWW.downloadHandler.text != "")

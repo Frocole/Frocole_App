@@ -71,7 +71,7 @@ public class CursistGroupManager : MonoBehaviour
         form.AddField("courseid", _persistentLoginDataManager.CourseData.CourseID);
 
         string output = "";
-        using (UnityWebRequest WWW_ = UnityWebRequest.Post(PersistentData.WebAdress + "PP_GetGroup.php", form))
+        using (UnityWebRequest WWW_ = UnityWebRequest.Post(UriMaker.InsertScriptInUri(PersistentData.WebAdress, "PP_GetGroup.php"), form))
         {
             yield return WWW_.SendWebRequest();
 
