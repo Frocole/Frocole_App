@@ -229,25 +229,6 @@ public class CreateAccountFormManager : MonoBehaviour
 
         string output = "";
 
-#warning The POST url code has to be replaced by a method inserting a php script (and keep the query) and correcting the / as well.
-
-        // Example of such method:
-        // 
-        // public static Uri InsertScript(Uri baseUrl, String script) {
-        // 
-        //  String s = baseUrl.GetComponents(UriComponents.SchemeAndServer, UriFormat.UriEscaped);    // "https://frocole.ou.nl:81"
-        //  String p = baseUrl.GetComponents(UriComponents.Path, UriFormat.UriEscaped).TrimEnd('/');  // "frocole"
-        //  String q = baseUrl.GetComponents(UriComponents.Query, UriFormat.UriEscaped);              // "i=zuyd"
-        // 
-        //  Uri u = new Uri(new Uri(s), p + "/" + script + "?" + q);                                  // "https://frocole.ou.nl:81/frocole/CheckIfServerExists.php?i=zuyd"
-        // 
-        //  return u;
-        // }
-        //
-        // Usage:
-        // 
-        // InsertScript("https://frocole.ou.nl:81/frocole?i=zuyd","CheckIfServerExists.php");       // Parameter is either PersistentData.WebAddress or newURL.
-
         using (UnityWebRequest WWW_ = UnityWebRequest.Post(UriMaker.InsertScriptInUri(newURL, "CheckIfServerExists.php"), form))
         {
             yield return WWW_.SendWebRequest();

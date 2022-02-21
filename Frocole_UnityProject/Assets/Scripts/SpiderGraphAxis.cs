@@ -39,6 +39,9 @@ public class SpiderGraphAxis : MonoBehaviour
     /// </summary>
     public Image AxisHead;
 
+    public Image MarkedByPA;
+
+
     /// <summary>
     /// Identifier for the axis.
     /// </summary>

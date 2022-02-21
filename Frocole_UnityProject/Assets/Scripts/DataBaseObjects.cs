@@ -68,6 +68,11 @@ public class CourseObject
     /// </summary>
     public string LeraarUserID;
 
+    /// <summary>
+    /// The deadline on which feedback is next reviewed
+    /// </summary>
+    public string Deadline;
+
     #endregion Fields
 }
 
@@ -295,4 +300,27 @@ public class UserObject
     public string Username;
 
     #endregion Fields
+}
+
+[System.Serializable]
+public class RootPAGuidelineObject
+{
+    public PAGuidelineObject[] paguidelines;
+}
+
+[System.Serializable]
+public class PAGuidelineObject
+{
+    public string PAGuidelineID;
+
+    public string CourseID;
+
+    public string SubjectType; //ipf, gpf, pf -rd
+
+    public string Parameter;
+
+    public string Delta;
+
+    public string Advice;
+
 }

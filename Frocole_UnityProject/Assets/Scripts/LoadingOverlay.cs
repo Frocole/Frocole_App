@@ -78,7 +78,7 @@ public class LoadingOverlay : MonoBehaviour
     {
         Loaders += 1;
         Timer = 0;
-        Debug.Log("Added Loader " + Loaders);
+        //Debug.Log("Added Loader " + Loaders);
     }
 
     // LoadingOverlay.RemoveLoader();
@@ -90,7 +90,7 @@ public class LoadingOverlay : MonoBehaviour
     {
         Loaders = Mathf.Max(0, Loaders - 1);
         Timer = 0;
-        Debug.Log("Removed Loader " + Loaders);
+       //Debug.Log("Removed Loader " + Loaders);
     }
 
     /// <summary>

@@ -53,17 +53,38 @@ public class PreviousSceneLoader : MonoBehaviour
 
     #region Methods
 
+    private void Awake()
+    {
+        SceneManager.sceneLoaded += UpdateLevelHistory;
+    }
+
     /// <summary>
     /// Executes the 'level was loaded' action.
     /// </summary>
     ///
     /// <param name="level"> The level. </param>
-    private void OnLevelWasLoaded(int level)
+    private void UpdateLevelHistory(Scene scene, LoadSceneMode mode)
     {
+        int level = scene.buildIndex;
+
         PreviousSceneID = currentSceneID;
         currentSceneID = level;
         Back = PreviousSceneID;
     }
+
+
+    /// <summary>
+    /// Executes the 'level was loaded' action.
+    /// </summary>
+    ///
+    /// <param name="level"> The level. </param>
+    //private void OnLevelWasLoaded(int level)
+    //{
+
+    //    PreviousSceneID = currentSceneID;
+    //    currentSceneID = level;
+    //    Back = PreviousSceneID;
+    //}
 
     #endregion Methods
 }

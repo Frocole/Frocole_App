@@ -33,8 +33,11 @@ EditorBuildSettings:
     path: Assets/Scenes/C_02_Pick_IPF-RD.unity
     guid: 6d7769293b5a18745a638ca93ecb09c5
   - enabled: 1
-    path: Assets/Scenes/C_03_ProvideFeedback.unity
-    guid: 79f4974a4380aeb499515895ae4c42fd
+    path: Assets/Scenes/C_03_IPF-RD.unity
+    guid: c4086a68d6fa315478ac2dd35f0ace04
+  - enabled: 1
+    path: Assets/Scenes/C_03_GPF-RD.unity
+    guid: 86b86ce443b58404298811f084a33c9b
   - enabled: 1
     path: Assets/Scenes/L_01_Home.unity
     guid: 5a4b5b3e5cb0bac44b27385220bdc625
@@ -54,8 +57,20 @@ EditorBuildSettings:
     path: Assets/Scenes/L_06_Pick_IPF-RD.unity
     guid: f19a77a7b24bf8949bb4c05f952097f0
   - enabled: 1
-    path: Assets/Scenes/L_07_ReviewFeedback.unity
+    path: Assets/Scenes/L_07_IPF-RD.unity
     guid: 308cb96e6a0a13b429c1cc092b974b21
+  - enabled: 1
+    path: Assets/Scenes/L_07_GPF-RD.unity
+    guid: 9a18650a62c89794186a8ee8dfa51df7
+  - enabled: 1
+    path: Assets/Scenes/L_08_PA.unity
+    guid: 54088e1f95632bc4ca0838c5923e9bef
+  - enabled: 1
+    path: Assets/Scenes/L_09_EditGuideline.unity
+    guid: b72bd802201163745841fe6f10cc14fd
+  - enabled: 1
+    path: Assets/Scenes/L_10_Deadline.unity
+    guid: 5053c02c89537a342afaa8f11f8977b2
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 8027ed9bd3383ab429c42a8d92a1f8fa, type: 2}
     com.unity.localization.settings: {fileID: 11400000, guid: e72e2c3de344e5e48854ede198d8f0d5, type: 2}

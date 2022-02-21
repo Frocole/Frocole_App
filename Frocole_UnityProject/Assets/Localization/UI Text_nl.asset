@@ -77,15 +77,17 @@ MonoBehaviour:
       door een instituut of organisatie, dan zou deze partij ook een bijbehorend
       web-adres moeten kunnen aanreiken.\r\n\r\nBent u zelf ge\xEFnteresseerd in
       het verstrekken van  Frocole web-adres? neemt u dan contact op met frocole@ou.nl
-      of kijkt u op https://frocole.ou.nl voor de nodige stappen.\r\n\r\nLET OP,
-      als u verbinding maakt met een Frocole web-adres, verbind u met derden. Het
-      is daarom belangrijk dat u de verstrekkende partij vertrouwd. Met het gebruik
+      of kijkt u op https://frocole.ou.nl voor de nodige stappen.\r\n\n\n\r\nLET
+      OP, als u verbinding maakt met een Frocole web-adres, verbind u met derden.
+      Het is daarom belangrijk dat u de verstrekkende partij vertrouwd. Met het gebruik
       van de app deelt u de volgende gegevens met derden: uw gebruikersnaam, alias,
       deelname aan cursussen en groepen binnen de app, en uw gegeven feedback binnen
       deze groepen. Uw wachtwoord wordt door de app meteen beveiligd (door middel
       van onder andere SHA256 - hashing) en uw onbeveiligde wachtwoord wordt nergens
       opgeslagen of gedeeld met derden.\" Er worden dus geen persoonsgegevens zoals
-      emailadres, geslacht of geboortejaar gevraagd en gedeeld. \r\n\r\n"
+      emailadres, geslacht of geboortejaar gevraagd en gedeeld. \r\n\r\nKreijns,
+      K., Henderikx, M. & van der Vegt, W. (2022). Feedback and reflection in online
+      collaborative learning (FROCOLE) (Version 1.2.5) [Mobile app]. Frocole. https://frocole.ou.nl/\n\n\n"
     m_Metadata:
       m_Items: []
   - m_Id: 364703561441280
@@ -197,18 +199,6 @@ MonoBehaviour:
     m_Localized: ga terug
     m_Metadata:
       m_Items: []
-  - m_Id: 377872107331584
-    m_Localized: Mijn feedback op bovengenoemd persoon
-    m_Metadata:
-      m_Items: []
-  - m_Id: 378099937730560
-    m_Localized: Gemiddelde groepsfeedback op bovengenoemd persoon
-    m_Metadata:
-      m_Items: []
-  - m_Id: 378294234669056
-    m_Localized: Zelffeedback van bovengenoemd persoon
-    m_Metadata:
-      m_Items: []
   - m_Id: 378573176856576
     m_Localized: Selecteer een criteriumbolletje op de buitenste cirkel van de diagram
     m_Metadata:
@@ -304,18 +294,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 1040462818992128
     m_Localized: ga terug
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1041292989194240
-    m_Localized: Mijn feedback op bovengenoemd persoon
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1041476091535360
-    m_Localized: Gemiddelde groepsfeedback op bovengenoemd persoon
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1041755067277312
-    m_Localized: Zelffeedback van bovengenoemd persoon
     m_Metadata:
       m_Items: []
   - m_Id: 1042057313017856

@@ -167,32 +167,35 @@ public class FeedbackSubmitter : MonoBehaviour
     /// </returns>
     private IEnumerator SubmitScoreToDB()
     {
-        LoadingOverlay.AddLoader();
-        WWWForm form = new WWWForm();
-
-        form.AddField("username", _persistentLoginDataManager.Username);
-        form.AddField("password", _persistentLoginDataManager.Password);
-        form.AddField("subject", _persistentLoginDataManager.SubjectData.SubjectID);
-        form.AddField("parameter", ActiveParameterName);
-        form.AddField("score", Mathf.FloorToInt(slider.value).ToString());
-        form.AddField("groupid", _persistentLoginDataManager.GroupData.GroupID);
-
-        string output = "";
-        using (UnityWebRequest WWW_ = UnityWebRequest.Post(UriMaker.InsertScriptInUri(PersistentData.WebAdress, "PP_SubmitFeedBack.php"), form))
+        if (!string.IsNullOrEmpty(ActiveParameterName))
         {
-            yield return WWW_.SendWebRequest();
+            LoadingOverlay.AddLoader();
+            WWWForm form = new WWWForm();
 
-            if (WWW_.result != UnityWebRequest.Result.Success)
+            form.AddField("username", _persistentLoginDataManager.Username);
+            form.AddField("password", _persistentLoginDataManager.Password);
+            form.AddField("subject", _persistentLoginDataManager.SubjectData.SubjectID);
+            form.AddField("parameter", ActiveParameterName);
+            form.AddField("score", Mathf.FloorToInt(slider.value).ToString());
+            form.AddField("groupid", _persistentLoginDataManager.GroupData.GroupID);
+
+            string output = "";
+            using (UnityWebRequest WWW_ = UnityWebRequest.Post(UriMaker.InsertScriptInUri(PersistentData.WebAdress, "PP_SubmitFeedBack.php"), form))
             {
-                Debug.Log(WWW_.error);
-                // If failed:
+                yield return WWW_.SendWebRequest();
+
+                if (WWW_.result != UnityWebRequest.Result.Success)
+                {
+                    Debug.Log(WWW_.error);
+                    // If failed:
+                }
+                else
+                {
+                    output = WWW_.downloadHandler.text;
+                }
             }
-            else
-            {
-                output = WWW_.downloadHandler.text;
-            }
+            LoadingOverlay.RemoveLoader();
         }
-        LoadingOverlay.RemoveLoader();
         //WWW www = new WWW(PersistentData.WebAdress + "PP_SubmitFeedBack.php", form);
         //yield return www;
     }
@@ -206,35 +209,38 @@ public class FeedbackSubmitter : MonoBehaviour
     /// </returns>
     private IEnumerator SubmitScoreToDBAndLeave()
     {
-        LoadingOverlay.AddLoader();
-        WWWForm form = new WWWForm();
-
-        form.AddField("username", _persistentLoginDataManager.Username);
-        form.AddField("password", _persistentLoginDataManager.Password);
-        form.AddField("subject", _persistentLoginDataManager.SubjectData.SubjectID);
-        form.AddField("parameter", ActiveParameterName);
-        form.AddField("score", Mathf.FloorToInt(slider.value).ToString());
-        form.AddField("groupid", _persistentLoginDataManager.GroupData.GroupID);
-
-        string output = "";
-        using (UnityWebRequest WWW_ = UnityWebRequest.Post(UriMaker.InsertScriptInUri(PersistentData.WebAdress, "PP_SubmitFeedBack.php"), form))
+        if (!string.IsNullOrEmpty(ActiveParameterName))
         {
-            yield return WWW_.SendWebRequest();
+            LoadingOverlay.AddLoader();
+            WWWForm form = new WWWForm();
 
-            if (WWW_.result != UnityWebRequest.Result.Success)
+            form.AddField("username", _persistentLoginDataManager.Username);
+            form.AddField("password", _persistentLoginDataManager.Password);
+            form.AddField("subject", _persistentLoginDataManager.SubjectData.SubjectID);
+            form.AddField("parameter", ActiveParameterName);
+            form.AddField("score", Mathf.FloorToInt(slider.value).ToString());
+            form.AddField("groupid", _persistentLoginDataManager.GroupData.GroupID);
+
+            string output = "";
+            using (UnityWebRequest WWW_ = UnityWebRequest.Post(UriMaker.InsertScriptInUri(PersistentData.WebAdress, "PP_SubmitFeedBack.php"), form))
             {
-                Debug.Log(WWW_.error);
-                // If failed:
+                yield return WWW_.SendWebRequest();
+
+                if (WWW_.result != UnityWebRequest.Result.Success)
+                {
+                    Debug.Log(WWW_.error);
+                    // If failed:
+                }
+                else
+                {
+                    output = WWW_.downloadHandler.text;
+                }
             }
-            else
-            {
-                output = WWW_.downloadHandler.text;
-            }
+
+            //WWW www = new WWW(PersistentData.WebAdress + "PP_SubmitFeedBack.php", form);
+            //yield return www;
+            LoadingOverlay.RemoveLoader();
         }
-
-        //WWW www = new WWW(PersistentData.WebAdress + "PP_SubmitFeedBack.php", form);
-        //yield return www;
-        LoadingOverlay.RemoveLoader();
         if (_persistentLoginDataManager.SubjectData.FeedbackType == SpiderGraph.FeedbackType.IPF_RD) loadIPFScene.Load();
         else loadGPFScene.Load();
     }

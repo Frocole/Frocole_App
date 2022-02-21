@@ -32,6 +32,9 @@ using UnityEngine.Networking;
 /// </summary>
 public class CourseSubscribtionManager : MonoBehaviour
 {
+    
+
+
     #region Fields
 
     /// <summary>
@@ -63,6 +66,8 @@ public class CourseSubscribtionManager : MonoBehaviour
 
     #region Methods
 
+   
+
     /// <summary>
     /// Request all courses.
     /// </summary>
@@ -85,7 +90,7 @@ public class CourseSubscribtionManager : MonoBehaviour
             {
                 Debug.Log(WWW_.error);
                 // If failed:
-
+                
             }
             else
             {
@@ -101,7 +106,7 @@ public class CourseSubscribtionManager : MonoBehaviour
 
                 foreach (CourseObject course in RootCourseObject.courses)
                 {
-                    Debug.Log(course.CourseName);
+                    //Debug.Log(course.CourseName);
                     GO = GameObject.Instantiate(CourseSelectorPrefab, Contentholder.transform).GetComponent<CourseSubscriber>();
                     GO.GetComponent<RectTransform>().localPosition = new Vector3(0, -YOffset, 0) * i + new Vector3(0, -0.5f * YOffset, 0);
                     GO.ThisCourse = course;

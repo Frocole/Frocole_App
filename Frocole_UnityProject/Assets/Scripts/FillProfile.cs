@@ -25,7 +25,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
-
 using UnityEngine;
 using UnityEngine.Networking;
 
@@ -82,6 +81,10 @@ public struct CompiledFeedbackOnSubjectFromSource
 public class FillProfile : MonoBehaviour
 {
     #region Fields
+
+    public SpiderGraph spiderGraph;
+
+    public SpiderGraph.FeedbackType type = SpiderGraph.FeedbackType.IPF_RD;
 
     /// <summary>
     /// The compiled feedback.
@@ -160,12 +163,15 @@ public class FillProfile : MonoBehaviour
 
         foreach (CompiledFeedbackOnSubjectFromSource source in compiledFeedback.Sources)
         {
-            for (int i = 0; i < compiledFeedback.parameters.Length; i++)
+            if (!(source.Source == UserDataManagerReference.UserData.UserID && type == SpiderGraph.FeedbackType.GPF_RD))
             {
-                if (source.parameterValues[i] >= 0 && source.Source != UserDataManagerReference.SubjectData.SubjectID)
+                for (int i = 0; i < compiledFeedback.parameters.Length; i++)
                 {
-                    Averages[i] = (Averages[i] * weight[i] + source.parameterValues[i]) / (weight[i] + 1);
-                    weight[i]++;
+                    if (source.parameterValues[i] >= 0 && source.Source != UserDataManagerReference.SubjectData.SubjectID)
+                    {
+                        Averages[i] = (Averages[i] * weight[i] + source.parameterValues[i]) / (weight[i] + 1);
+                        weight[i]++;
+                    }
                 }
             }
         }
@@ -266,6 +272,11 @@ public class FillProfile : MonoBehaviour
             profile.gameObject.SetActive(false);
             profile.gameObject.SetActive(true);
         }
+
+        if (type == SpiderGraph.FeedbackType.GPF_RD || (type == SpiderGraph.FeedbackType.IPF_RD && UserDataManagerReference.SubjectData.SubjectID == UserDataManagerReference.UserData.UserID))
+        {
+            StartCoroutine(CompareGuidelines());
+        }
     }
 
     /// <summary>
@@ -331,6 +342,72 @@ public class FillProfile : MonoBehaviour
         yield return new WaitForEndOfFrame();
         LoadingOverlay.RemoveLoader();
     }
+
+    private IEnumerator CompareGuidelines()
+    {
+        WWWForm form = new WWWForm();
+
+        form.AddField("username", UserDataManagerReference.Username);
+        form.AddField("password", UserDataManagerReference.Password);
+        form.AddField("courseid", UserDataManagerReference.CourseData.CourseID);
+
+
+        // Get all Guidelines for this course.
+        RootPAGuidelineObject Guidelineset = null;
+        using (UnityWebRequest WWW_ = UnityWebRequest.Post(UriMaker.InsertScriptInUri(PersistentData.WebAdress, "PP_GetAllMyPAGuidelines.php"), form))
+        {
+            yield return WWW_.SendWebRequest();
+
+            if (WWW_.result != UnityWebRequest.Result.Success)
+            {
+                Debug.Log(WWW_.error);
+            }
+            else
+            {
+                Debug.Log(WWW_.downloadHandler.text);
+                Guidelineset = JsonUtility.FromJson<RootPAGuidelineObject>("{\"paguidelines\": " + WWW_.downloadHandler.text + "}");
+            }
+        }
+
+        var a = AverageScores();
+        var b = compiledFeedback.Sources.Find(X => X.Source == UserDataManagerReference.UserData.UserID).parameterValues;
+
+        if (Guidelineset.paguidelines != null)
+        {
+            if (type == SpiderGraph.FeedbackType.IPF_RD) for (int i = 0; i < compiledFeedback.parameters.Length; i++)
+            {
+                foreach (var GuidelineOfParameter in Guidelineset.paguidelines.ToList().FindAll(X => X.Parameter == compiledFeedback.parameters[i] && X.SubjectType == "ipf-rd"))
+                {
+                    float PADelta = 0;
+                    float.TryParse(GuidelineOfParameter.Delta, out PADelta);
+
+                    if ((PADelta < 0 && PADelta > b[i] - a[i]) || (PADelta > 0 && PADelta < b[i] - a[i])) MarkParameter(i);
+                }
+            }
+
+            if (type == SpiderGraph.FeedbackType.GPF_RD) for (int i = 0; i < compiledFeedback.parameters.Length; i++)
+                {
+                    foreach (var GuidelineOfParameter in Guidelineset.paguidelines.ToList().FindAll(X => X.Parameter == compiledFeedback.parameters[i] && X.SubjectType == "gpf-rd"))
+                    {
+                        float PADelta = 0;
+                        float.TryParse(GuidelineOfParameter.Delta, out PADelta);
+
+                        if ((PADelta < 0 && PADelta > b[i] - a[i]) || (PADelta > 0 && PADelta < b[i] - a[i])) MarkParameter(i);
+                    }
+                }
+
+        }
+
+        yield return null;
+    }
+
+    private void MarkParameter(int parameteri)
+    {
+        Debug.Log($"Marked parameter {parameteri}: {compiledFeedback.parameters[parameteri]}");
+
+        spiderGraph.spiderGraphAxes[parameteri].MarkedByPA.gameObject.SetActive(true);
+    }
+
 
     #endregion Methods
 }

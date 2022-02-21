@@ -91,26 +91,21 @@ public class StudentGroupOverview : MonoBehaviour
         form.AddField("password", _persistentLoginDataManager.Password);
         form.AddField("courseid", _persistentLoginDataManager.CourseData.CourseID);
 
-        Debug.Log("FindGroup 1");
 
         string output = "";
         using (UnityWebRequest WWW_ = UnityWebRequest.Post(UriMaker.InsertScriptInUri(PersistentData.WebAdress, "PP_GetGroup.php"), form))
         {
-            Debug.Log("FindGroup 2");
             yield return WWW_.SendWebRequest();
 
-            Debug.Log("FindGroup 3");
 
             if (WWW_.result != UnityWebRequest.Result.Success)
             {
-                Debug.Log("FindGroup 4a");
                 Debug.Log(WWW_.error);
                 NoGroupOverlay.SetActive(true);
                 // If failed:
             }
             else
             {
-                Debug.Log("FindGroup 4b");
                 output = WWW_.downloadHandler.text;
                 // If succesfull:
                 RootGroupObject = JsonUtility.FromJson<RootGroupObject>("{\"groups\": " + output + "}");

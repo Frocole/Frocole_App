@@ -61,11 +61,16 @@ public class UserDataManager : MonoBehaviour
     /// The subscriptions.
     /// </summary>
     public List<string> Subscriptions = new List<string>();
+    public Dictionary<string,string> SubscriptionNames = new Dictionary<string, string>();
+    public string SubscriptionNameFromID(string id) => SubscriptionNames[id];
 
     /// <summary>
     /// Information describing the user.
     /// </summary>
     public UserObject UserData = new UserObject();
+
+    public PAGuidelineObject GuidelineData;
+
 
     #endregion Fields
 

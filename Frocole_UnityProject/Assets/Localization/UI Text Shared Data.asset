@@ -159,18 +159,6 @@ MonoBehaviour:
     m_Key: C02_ga terug
     m_Metadata:
       m_Items: []
-  - m_Id: 377872107331584
-    m_Key: C03_mijn feedback
-    m_Metadata:
-      m_Items: []
-  - m_Id: 378099937730560
-    m_Key: C03_gemiddelde
-    m_Metadata:
-      m_Items: []
-  - m_Id: 378294234669056
-    m_Key: C03_zelffeedback
-    m_Metadata:
-      m_Items: []
   - m_Id: 378573176856576
     m_Key: C03_feedback submitter
     m_Metadata:
@@ -265,18 +253,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 1040462818992128
     m_Key: L06_ga terug
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1041292989194240
-    m_Key: L07_Mijn feedback op bovengenoemd persoon
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1041476091535360
-    m_Key: L07_Gemiddelde groepsfeedback op bovengenoemd persoon
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1041755067277312
-    m_Key: L07_Zelffeedback van bovengenoemd persoon
     m_Metadata:
       m_Items: []
   - m_Id: 1042057313017856

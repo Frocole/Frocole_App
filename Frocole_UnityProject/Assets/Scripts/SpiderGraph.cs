@@ -26,6 +26,7 @@ using System.Collections.Generic;
 
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Networking;
 
 /// <summary>
 /// A spider graph.
@@ -184,6 +185,8 @@ public class SpiderGraph : MonoBehaviour
             InstantiateAxes();
         }
     }
+
+  
 
     #endregion Methods
 }

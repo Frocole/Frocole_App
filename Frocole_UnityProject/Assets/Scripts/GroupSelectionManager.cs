@@ -100,7 +100,7 @@ public class GroupSelectionManager : MonoBehaviour
         //WWW www = new WWW(PersistentData.WebAdress + "PP_GetAllGroupsInCourse.php", form);
         //yield return www;
 
-        Debug.Log("GROUPS WITHIN COURSE {\"groups\": " + output + "}");
+        //Debug.Log("GROUPS WITHIN COURSE {\"groups\": " + output + "}");
 
         AllGroups = JsonUtility.FromJson<RootGroupObject>("{\"groups\": " + output + "}");
 

@@ -58,7 +58,13 @@ public class GetInfoFromDatabase : MonoBehaviour
     /// </returns>
     public IEnumerator DownloadInfoText()
     {
+
+
         LoadingOverlay.AddLoader();
+         
+
+
+
         UnityWebRequest WWW = UnityWebRequest.Get(UriMaker.InsertScriptInUri(PersistentData.WebAdress, "GetFrocoleInfo.php"));
         yield return WWW.SendWebRequest();
 
@@ -73,7 +79,10 @@ public class GetInfoFromDatabase : MonoBehaviour
 
         WWW.Dispose();
 
-        contentholder.sizeDelta = new Vector2(contentholder.sizeDelta.x, infotext.preferredHeight + 50);
+        contentholder.sizeDelta = new Vector2(contentholder.sizeDelta.x, contentholder.sizeDelta.y + infotext.preferredHeight + 50);
+
+
+
         LoadingOverlay.RemoveLoader();
     }
 
@@ -82,7 +91,8 @@ public class GetInfoFromDatabase : MonoBehaviour
     /// </summary>
     void Start()
     {
-        StartCoroutine(DownloadInfoText());
+        if (!string.IsNullOrEmpty(PersistentData.WebAdress))
+            StartCoroutine(DownloadInfoText());
     }
 
     #endregion Methods

@@ -21,6 +21,7 @@
 
 #endregion Header
 
+using System;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -215,7 +216,7 @@ public class LoginManager : MonoBehaviour
             {
                 output = WWW_.downloadHandler.text;
                 // If successful:
-                Debug.Log("LOGIN DATA {\"users\": " + output + "}");
+                //Debug.Log("LOGIN DATA {\"users\": " + output + "}");
                 var data = JsonUtility.FromJson<RootUserObject>("{\"users\": " + output + "}");
 
                 if (data.users.Length != 1)
@@ -334,33 +335,51 @@ public class LoginManager : MonoBehaviour
         LoadingOverlay.AddLoader();
         WWWForm form = new WWWForm();
 
-        string output = "";
-        using (UnityWebRequest WWW_ = UnityWebRequest.Post(UriMaker.InsertScriptInUri(newURL, "CheckIfServerExists.php"), form))
-        {
-            yield return WWW_.SendWebRequest();
+        Uri Uri;
 
-            if (WWW_.result != UnityWebRequest.Result.Success)
+        try 
+        {
+            Uri = UriMaker.InsertScriptInUri(newURL, "CheckIfServerExists.php");
+        }
+        catch 
+        {
+            Uri = null;
+        }
+
+
+        if (Uri != null)
+        {
+           string output = "";
+            using (UnityWebRequest WWW_ = UnityWebRequest.Post(UriMaker.InsertScriptInUri(newURL, "CheckIfServerExists.php"), form))
             {
-                Debug.Log(WWW_.error); // If failed:
+                yield return WWW_.SendWebRequest();
+
+                if (WWW_.result != UnityWebRequest.Result.Success)
+                {
+                    Debug.Log(WWW_.error); // If failed:
+                }
+                else
+                {
+                    output = WWW_.downloadHandler.text;
+                }
+            }
+            if (output == "This Frocole Server Exists.")
+            {
+                PersistentData.Instance.SetWebAdress(newURL);
+                NoServerFoundNotification.SetActive(false);
             }
             else
-            {
-                output = WWW_.downloadHandler.text;
+            {                
+                Debug.Log(" WrongAdress" + output);
+                NoServerFoundNotification.SetActive(true);
             }
         }
-
-        if (output == "This Frocole Server Exists.")
-        {
-            PersistentData.Instance.SetWebAdress(newURL);
-            NoServerFoundNotification.SetActive(false);
+        else 
+        { 
+            Debug.Log("Invalid URL");
+            NoServerFoundNotification.SetActive(true); 
         }
-        else
-        {
-            // WrongAdressMessage
-            Debug.Log(" WrongAdress" + output);
-            NoServerFoundNotification.SetActive(true);
-        }
-
+        
         LoadingOverlay.RemoveLoader();
     }
 

@@ -62,6 +62,7 @@ public class ManageAllCourseButtons : MonoBehaviour
     #endregion Fields
 
     #region Methods
+      
 
     /// <summary>
     /// Request all courses.
@@ -98,7 +99,7 @@ public class ManageAllCourseButtons : MonoBehaviour
 
         //WWW www = new WWW(PersistentData.WebAdress + "PP_GetAllMySubScribedCourses.php", form);
         //yield return www;
-        Debug.Log("ALL SUBSCRIBED COURSES {\"courses\": " + output + "}");
+        //Debug.Log("ALL SUBSCRIBED COURSES {\"courses\": " + output + "}");
         RootCourseObject = JsonUtility.FromJson<RootCourseObject>("{\"courses\": " + output + "}");
 
         yield return new WaitForEndOfFrame();
@@ -108,10 +109,12 @@ public class ManageAllCourseButtons : MonoBehaviour
         Contentholder.GetComponent<RectTransform>().sizeDelta = new Vector2(0, YOffset * RootCourseObject.courses.Length);
 
         _persistentLoginDataManager.Subscriptions.Clear();
+        _persistentLoginDataManager.SubscriptionNames.Clear();
 
         foreach (CourseObject course in RootCourseObject.courses)
         {
             _persistentLoginDataManager.Subscriptions.Add(course.CourseID);
+            _persistentLoginDataManager.SubscriptionNames.Add(course.CourseID, course.CourseName);
 
             //Debug.Log(course.CourseName);
             GO = GameObject.Instantiate(CourseSelectorPrefab, Contentholder.transform).GetComponent<CourseSelector>();
@@ -119,9 +122,13 @@ public class ManageAllCourseButtons : MonoBehaviour
             GO.ThisCourse = course;
             GO.ButtonLabel.text = course.CourseName;
 
+
+
             i++;
         }
         LoadingOverlay.RemoveLoader();
+
+        PedagogicalAgent.Instance.StartPAReview();
     }
 
     /// <summary>

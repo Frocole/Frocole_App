@@ -86,7 +86,9 @@ MonoBehaviour:
       is immediately secured by the app (by means of SHA256 - hashing, among others)
       and your unsecured password is not stored anywhere or shared with third parties.\"
       Thus, no personal data such as email address, gender or year of birth is requested
-      and shared. \r\n\r\n\r\n"
+      and shared. \r\n\r\n\r\nKreijns, K., Henderikx, M. & van der Vegt, W. (2022).
+      Feedback and reflection in online collaborative learning (FROCOLE) (Version
+      1.2.5)\n\n\nerrerer [Mobile app]. "
     m_Metadata:
       m_Items: []
   - m_Id: 364703561441280
@@ -198,18 +200,6 @@ MonoBehaviour:
     m_Localized: go back
     m_Metadata:
       m_Items: []
-  - m_Id: 377872107331584
-    m_Localized: My feedback to the selected person
-    m_Metadata:
-      m_Items: []
-  - m_Id: 378099937730560
-    m_Localized: Avarage group feedback of the selected person
-    m_Metadata:
-      m_Items: []
-  - m_Id: 378294234669056
-    m_Localized: Self feedback of the selected person
-    m_Metadata:
-      m_Items: []
   - m_Id: 378573176856576
     m_Localized: Select a criterion dot on the outer circle of the diagram
     m_Metadata:
@@ -305,18 +295,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 1040462818992128
     m_Localized: go back
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1041292989194240
-    m_Localized: "My feedback on the selected person\r"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1041476091535360
-    m_Localized: Avarage group feedback on the selected person
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1041755067277312
-    m_Localized: Self-feedback of the selected person
     m_Metadata:
       m_Items: []
   - m_Id: 1042057313017856
