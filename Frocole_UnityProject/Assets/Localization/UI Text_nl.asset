@@ -345,5 +345,79 @@ MonoBehaviour:
     m_Localized: Mijn feedback op de groep
     m_Metadata:
       m_Items: []
+  - m_Id: 130050770668781568
+    m_Localized: PA-bericht maken
+    m_Metadata:
+      m_Items: []
+  - m_Id: 130051405531217920
+    m_Localized: ga terug
+    m_Metadata:
+      m_Items: []
+  - m_Id: 130053735374815232
+    m_Localized: pedagogical agent advies
+    m_Metadata:
+      m_Items: []
+  - m_Id: 130054449580900352
+    m_Localized: advies
+    m_Metadata:
+      m_Items: []
+  - m_Id: 130054775037919232
+    m_Localized: ga terug
+    m_Metadata:
+      m_Items: []
+  - m_Id: 130055180400623616
+    m_Localized: PA-bericht
+    m_Metadata:
+      m_Items: []
+  - m_Id: 130055554666758144
+    m_Localized: ----- uitleg van de trigger -----
+    m_Metadata:
+      m_Items: []
+  - m_Id: 130057256568520704
+    m_Localized: bewaar advies
+    m_Metadata:
+      m_Items: []
+  - m_Id: 130057725424599040
+    m_Localized: PA-bericht verwijderen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 130057962776068096
+    m_Localized: PA-bericht veranderen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 130058592991215616
+    m_Localized: pedagogical agent advies
+    m_Metadata:
+      m_Items: []
+  - m_Id: 130059176074969088
+    m_Localized: bewaar deadline
+    m_Metadata:
+      m_Items: []
+  - m_Id: 130063730690654208
+    m_Localized: stel deadline in
+    m_Metadata:
+      m_Items: []
+  - m_Id: 130070703142240256
+    m_Localized: '"De drempelwaarde bij {0} is {2}. Overschrijding betekent dat de
+      student {1} {4} beoordelingen heeft gegeven dan de groepsgenoten."'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 130088078524710912
+    m_Localized: hoger
+    m_Metadata:
+      m_Items: []
+  - m_Id: 130088264344961024
+    m_Localized: lager
+    m_Metadata:
+      m_Items: []
+  - m_Id: 130088807842873344
+    m_Localized: zichzelf
+    m_Metadata:
+      m_Items: []
+  - m_Id: 130088880425304064
+    m_Localized: de groep
+    m_Metadata:
+      m_Items: []
   references:
-    version: 1
+    version: 2
+    RefIds: []

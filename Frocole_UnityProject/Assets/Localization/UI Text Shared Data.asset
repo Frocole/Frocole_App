@@ -304,13 +304,86 @@ MonoBehaviour:
     m_Key: GPF_RD_C03_L3
     m_Metadata:
       m_Items: []
+  - m_Id: 130050770668781568
+    m_Key: L08_PA-bericht maken
+    m_Metadata:
+      m_Items: []
+  - m_Id: 130051405531217920
+    m_Key: "L08_ga terug\t"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 130053735374815232
+    m_Key: L08_pedagogical agent advies
+    m_Metadata:
+      m_Items: []
+  - m_Id: 130054449580900352
+    m_Key: L09_advies
+    m_Metadata:
+      m_Items: []
+  - m_Id: 130054775037919232
+    m_Key: L09_go back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 130055180400623616
+    m_Key: L09_vul hier advies in voor deze situatie
+    m_Metadata:
+      m_Items: []
+  - m_Id: 130055554666758144
+    m_Key: L09_uitleg van de trigger
+    m_Metadata:
+      m_Items: []
+  - m_Id: 130057256568520704
+    m_Key: L09_upload_advies
+    m_Metadata:
+      m_Items: []
+  - m_Id: 130057725424599040
+    m_Key: L09_verwijderen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 130057962776068096
+    m_Key: L09_advies aanpassen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 130058592991215616
+    m_Key: L10_pedagogical agent advies
+    m_Metadata:
+      m_Items: []
+  - m_Id: 130059176074969088
+    m_Key: L10_upload deadline
+    m_Metadata:
+      m_Items: []
+  - m_Id: 130063730690654208
+    m_Key: L01_deadline
+    m_Metadata:
+      m_Items: []
+  - m_Id: 130070703142240256
+    m_Key: L09_description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 130088078524710912
+    m_Key: L09_hoger
+    m_Metadata:
+      m_Items: []
+  - m_Id: 130088264344961024
+    m_Key: L09_lager
+    m_Metadata:
+      m_Items: []
+  - m_Id: 130088807842873344
+    m_Key: L09_zichzelf
+    m_Metadata:
+      m_Items: []
+  - m_Id: 130088880425304064
+    m_Key: L09_de groep
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
-    id: 0
+    rid: 7115609853108159155
   references:
-    version: 1
-    00000000:
+    version: 2
+    RefIds:
+    - rid: 7115609853108159155
       type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
       data:
         m_CustomEpoch: 1632832019252

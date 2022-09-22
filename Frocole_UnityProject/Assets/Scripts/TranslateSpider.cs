@@ -85,7 +85,12 @@ public class TranslateSpider : MonoBehaviour
         {
             // Look-up the FeedbackType dependent key and apply it to the Text object.
             // 
-            item.target.text = getString($"{MyFeedbackType}_"+item.localeKey);
+            string text = getString($"{MyFeedbackType}_" + item.localeKey);
+            if (text.StartsWith("[[") && text.EndsWith("]]"))
+            {
+                text = getString(item.localeKey);
+            }
+            item.target.text = text;
         }
     }
 }

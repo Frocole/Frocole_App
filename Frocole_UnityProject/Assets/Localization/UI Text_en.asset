@@ -346,5 +346,79 @@ MonoBehaviour:
     m_Localized: My feedback on the group
     m_Metadata:
       m_Items: []
+  - m_Id: 130050770668781568
+    m_Localized: set PA-message
+    m_Metadata:
+      m_Items: []
+  - m_Id: 130051405531217920
+    m_Localized: go back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 130053735374815232
+    m_Localized: pedagogical agent advice
+    m_Metadata:
+      m_Items: []
+  - m_Id: 130054449580900352
+    m_Localized: advise
+    m_Metadata:
+      m_Items: []
+  - m_Id: 130054775037919232
+    m_Localized: go back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 130055180400623616
+    m_Localized: PA-message
+    m_Metadata:
+      m_Items: []
+  - m_Id: 130055554666758144
+    m_Localized: ----- trigger explanation -----
+    m_Metadata:
+      m_Items: []
+  - m_Id: 130057256568520704
+    m_Localized: update PA-message
+    m_Metadata:
+      m_Items: []
+  - m_Id: 130057725424599040
+    m_Localized: delete PA-message
+    m_Metadata:
+      m_Items: []
+  - m_Id: 130057962776068096
+    m_Localized: change PA-message
+    m_Metadata:
+      m_Items: []
+  - m_Id: 130058592991215616
+    m_Localized: pedagogical agent advice
+    m_Metadata:
+      m_Items: []
+  - m_Id: 130059176074969088
+    m_Localized: update deadline
+    m_Metadata:
+      m_Items: []
+  - m_Id: 130063730690654208
+    m_Localized: set deadline
+    m_Metadata:
+      m_Items: []
+  - m_Id: 130070703142240256
+    m_Localized: '"The treshold value of {0} is {2}. Crossing means that the student
+      has judged {1} much {4} then his/her fellow group members." '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 130088078524710912
+    m_Localized: higher
+    m_Metadata:
+      m_Items: []
+  - m_Id: 130088264344961024
+    m_Localized: lower
+    m_Metadata:
+      m_Items: []
+  - m_Id: 130088807842873344
+    m_Localized: her/himself
+    m_Metadata:
+      m_Items: []
+  - m_Id: 130088880425304064
+    m_Localized: the group
+    m_Metadata:
+      m_Items: []
   references:
-    version: 1
+    version: 2
+    RefIds: []

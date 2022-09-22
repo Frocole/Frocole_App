@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Localization.Settings;
+using UnityEngine.Localization.Tables;
 using UnityEngine.Networking;
 using UnityEngine.UI;
 
@@ -15,7 +17,6 @@ public class GuidelineInterFace : MonoBehaviour
     private string SelectedAdvice;
 
     public LoadScene OnEditComplete;
-
 
     // Start is called before the first frame update
     void Start()
@@ -48,9 +49,6 @@ public class GuidelineInterFace : MonoBehaviour
 
             Update.gameObject.SetActive(true);
             delete.gameObject.SetActive(true);
-
-
-
         }
         else
         {
@@ -58,7 +56,6 @@ public class GuidelineInterFace : MonoBehaviour
         }
 
         triggerDescription();
-
     }
 
     public void SelectType(int i)
@@ -85,14 +82,32 @@ public class GuidelineInterFace : MonoBehaviour
     {
         bool Valid = true;
 
-        var a = ((DdType.value == 0) ? "zichzelf" : "de groep");
+        var table = LocalizationSettings.StringDatabase.GetTable("UI Text");
+
+        var a = ((DdType.value == 0) ?
+            table.GetEntry("L09_zichzelf").GetLocalizedString() :
+            table.GetEntry("L09_de groep").GetLocalizedString());
         int b = 0;
         Valid &= int.TryParse(IfDelta.text, out b);
-        var c = ((b >= 0) ? "hoger" : "lager");
+        var c = ((b >= 0) ?
+            table.GetEntry("L09_hoger").GetLocalizedString() :
+            table.GetEntry("L09_lager").GetLocalizedString());
         var d = activeparameterselection.options[activeparameterselection.value].text;
+
+        //! Obsolete (not used in translation)
         var e = ((Mathf.Abs(b) == 1) ? "punt" : "punten");
 
-        string description = $"\"De student heeft {d} van {a} {Mathf.Abs(b)} {e} {c} ingeschat dan de anderen in zijn of haar groep.\"";
+        //! Original
+        //string description = $"\"De student heeft {d} van {a} {Mathf.Abs(b)} {e} {c} ingeschat dan de anderen in zijn of haar groep.\"";
+        // 
+        //! Recoded to String.Format 
+        //string.Format($"\"De student heeft {0} van {1} {2} {3} {4} ingeschat dan de anderen in zijn of haar groep.\"", d, a, Mathf.Abs(b), e, c);
+        // 
+        //! Linked to Localization. 
+        var entry = table.GetEntry("L09_description");
+        string fmt = entry.GetLocalizedString(d, a, Mathf.Abs(b), e, c);
+
+        string description = string.Format(fmt, d, a, Mathf.Abs(b), e, c);
 
         if (Valid)
         {
