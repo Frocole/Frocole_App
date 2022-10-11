@@ -19,7 +19,7 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 62314405888
-    m_Localized: go back
+    m_Localized: Go back
     m_Metadata:
       m_Items: []
   - m_Id: 188428738560
@@ -30,129 +30,129 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 193046667264
-    m_Localized: loading...
+    m_Localized: "Loading...\r"
     m_Metadata:
       m_Items: []
   - m_Id: 233664307200
-    m_Localized: reconnect
+    m_Localized: "Reconnecting \u2026 \r"
     m_Metadata:
       m_Items: []
   - m_Id: 2481748336640
-    m_Localized: info
+    m_Localized: Info
     m_Metadata:
       m_Items: []
   - m_Id: 359519473000448
-    m_Localized: account
+    m_Localized: Account
     m_Metadata:
       m_Items: []
   - m_Id: 359600934772736
-    m_Localized: logoff
+    m_Localized: Logoff
     m_Metadata:
       m_Items: []
   - m_Id: 359803653873664
-    m_Localized: my courses
+    m_Localized: My courses
     m_Metadata:
       m_Items: []
   - m_Id: 360236657041408
-    m_Localized: change
+    m_Localized: Change
     m_Metadata:
       m_Items: []
   - m_Id: 362113868128256
     m_Localized: "This app was conceived and developed by the Open University (OU)
       to support the feedback and reflection process of groups working together.
       \r\n\r\nAdditional information including manuals, workshop materials, and presentations
-      can be found on the associated website https://frocole.ou.nl\r\n\r\nThe formgiving
-      and implementation of the app were carried out by:  \r\n- Crasborn Communicatie
-      Vormgevers\r\n- XR Group    \r\n\r\nFor questions about the app, please email
-      frocole@ou.nl.   \r\n\r\nEvery effort has been made to provide a safe, accessible,
-      and user-friendly app that supports the feedback and reflection process of
-      collaborating groups with the goal of achieving productive social interaction
-      among group members and preventing common problems such as free-riding behavior
-      and differing expectations. However, the creators of the app cannot guarantee
-      that the app will always function flawlessly. Should the app (temporarily)
-      not function as it should, the OU is in no way liable for any direct, indirect,
-      incidental, accidental or consequential damage caused by the use of the app,
-      regardless of how such damage arose. \r\n\r\nTo use this app, you must connect
-      to a Frocole web address. These addresses are set up by institutes or organizations
-      to facilitate the use of this app in closed circles. if this app was provided
-      to you by an institute or organization, that party should also be able to provide
-      a corresponding web address.\r\n\r\nIf you are interested in providing Frocole
-      web address yourself, please contact frocole@ou.nl or visit https://frocole.ou.nl
-      for the necessary steps.\r\n\r\nPLEASE NOTE, when you connect to a Frocole
-      web address, you are connecting to third parties. It is therefore important
-      that you trust the providing party. By using the app, you are sharing the following
-      data with third parties: your username, alias, participation in courses and
-      groups within the app, and your feedback within these groups. Your password
-      is immediately secured by the app (by means of SHA256 - hashing, among others)
-      and your unsecured password is not stored anywhere or shared with third parties.\"
-      Thus, no personal data such as email address, gender or year of birth is requested
-      and shared. \r\n\r\n\r\nKreijns, K., Henderikx, M. & van der Vegt, W. (2022).
-      Feedback and reflection in online collaborative learning (FROCOLE) (Version
-      1.2.5)\n\n\nerrerer [Mobile app]. "
+      can be found on the accompanying  website https://frocole.ou.nl\r\n\r\nThe
+      formgiving and implementation of the app were carried out by:  \r\n- Crasborn
+      Communicatie Vormgevers\r\n- XR Group    \r\n\r\nFor questions about the app,
+      please email frocole@ou.nl.   \r\n\r\nEvery effort has been made to provide
+      a safe, accessible, and user-friendly app that supports the feedback and reflection
+      process of collaborating groups with the goal of achieving productive social
+      interaction among group members and preventing common problems such as free-riding
+      behavior and differing expectations. However, the creators of the app cannot
+      guarantee that the app will always function flawlessly. Should the app (temporarily)
+      not function as it should, the Open Universiteit is in no way liable for any
+      direct, indirect, incidental, accidental or consequential damage caused by
+      the use of the app, regardless of how such damage arose. \r\n\r\nTo use this
+      app, you must connect to a Frocole web address. These addresses are issued
+      by institutes or organizations to facilitate the use of this app in closed
+      circles. If this app was provided to you by an institute or organization, that
+      party should also be able to provide a corresponding web address.\r\n\r\nIf
+      you are interested in providing Frocole web address yourself, please contact
+      frocole@ou.nl or visit https://frocole.ou.nl for taking the necessary steps.\r\n\r\nPLEASE
+      NOTE, when you connect to a Frocole web address, you are connecting to third
+      parties. It is therefore important that you trust the providing party. By using
+      the app, you are sharing the following data with third parties: your username,
+      alias, participation in courses and groups within the app, and your feedback
+      within these groups. Your password is immediately secured by the app (by means
+      of SHA256 - hashing, among others) and your unsecured password is not stored
+      anywhere or shared with third parties.\" Thus, no personal data such as email
+      address, gender or year of birth is requested and shared. \r\n\r\n\r\nKreijns,
+      K., Henderikx, M. & van der Vegt, W. (2022). Feedback and reflection in online
+      collaborative learning (FROCOLE) (Version 1.2.5)\r [Mobile app]\n\r\n\r\n"
     m_Metadata:
       m_Items: []
   - m_Id: 364703561441280
-    m_Localized: login
+    m_Localized: Login
     m_Metadata:
       m_Items: []
   - m_Id: 364905705922560
-    m_Localized: web-address
+    m_Localized: Web-address
     m_Metadata:
       m_Items: []
   - m_Id: 365439359803392
-    m_Localized: alias
+    m_Localized: Alias
     m_Metadata:
       m_Items: []
   - m_Id: 365700463616000
-    m_Localized: user name
+    m_Localized: User name
     m_Metadata:
       m_Items: []
   - m_Id: 365842231091200
-    m_Localized: password
+    m_Localized: "Password\r"
     m_Metadata:
       m_Items: []
   - m_Id: 366319777767424
-    m_Localized: repeat password
+    m_Localized: Repeat password
     m_Metadata:
       m_Items: []
   - m_Id: 366438724034560
-    m_Localized: save password
+    m_Localized: Save password
     m_Metadata:
       m_Items: []
   - m_Id: 366655007514624
-    m_Localized: create account
+    m_Localized: Create account
     m_Metadata:
       m_Items: []
   - m_Id: 367093387780096
-    m_Localized: back
+    m_Localized: Back
     m_Metadata:
       m_Items: []
   - m_Id: 368737156489216
-    m_Localized: login
+    m_Localized: Login
     m_Metadata:
       m_Items: []
   - m_Id: 368930371297280
-    m_Localized: "Login failed. \nCheck your data"
+    m_Localized: "Login failed. \r\nCheck your login info"
     m_Metadata:
       m_Items: []
   - m_Id: 369113993732096
-    m_Localized: no server found at this web address.
+    m_Localized: No server found at this web address.
     m_Metadata:
       m_Items: []
   - m_Id: 369416453382144
-    m_Localized: web address
+    m_Localized: Web-address
     m_Metadata:
       m_Items: []
   - m_Id: 369544656478208
-    m_Localized: user name
+    m_Localized: User name
     m_Metadata:
       m_Items: []
   - m_Id: 369899058388992
-    m_Localized: password
+    m_Localized: "Password\r"
     m_Metadata:
       m_Items: []
   - m_Id: 369985293279232
-    m_Localized: save password
+    m_Localized: "Save password\r"
     m_Metadata:
       m_Items: []
   - m_Id: 370091056848896
@@ -160,7 +160,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 373389298130944
-    m_Localized: courses
+    m_Localized: Courses
     m_Metadata:
       m_Items: []
   - m_Id: 374691017154560
@@ -185,7 +185,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 375255180402688
-    m_Localized: go back
+    m_Localized: "Go back\r"
     m_Metadata:
       m_Items: []
   - m_Id: 375387934318592
@@ -193,11 +193,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 377387094794240
-    m_Localized: group
+    m_Localized: Group
     m_Metadata:
       m_Items: []
   - m_Id: 377572097155072
-    m_Localized: go back
+    m_Localized: "Go back\r"
     m_Metadata:
       m_Items: []
   - m_Id: 378573176856576
@@ -205,7 +205,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 378919831887872
-    m_Localized: go back
+    m_Localized: "Go back\r"
     m_Metadata:
       m_Items: []
   - m_Id: 379018481917952
@@ -214,19 +214,19 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1029236286185472
-    m_Localized: group
+    m_Localized: Group
     m_Metadata:
       m_Items: []
   - m_Id: 1029416121163776
-    m_Localized: go back
+    m_Localized: Go back
     m_Metadata:
       m_Items: []
   - m_Id: 1029646463950848
-    m_Localized: add group
+    m_Localized: "Add group\r"
     m_Metadata:
       m_Items: []
   - m_Id: 1030741802246144
-    m_Localized: select a diagram
+    m_Localized: "Select diagram\r"
     m_Metadata:
       m_Items: []
   - m_Id: 1030881397071872
@@ -238,27 +238,27 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1031392745644032
-    m_Localized: go back
+    m_Localized: Go back
     m_Metadata:
       m_Items: []
   - m_Id: 1031636321460224
-    m_Localized: group
+    m_Localized: Group
     m_Metadata:
       m_Items: []
   - m_Id: 1032241043628032
-    m_Localized: group name
+    m_Localized: Group name
     m_Metadata:
       m_Items: []
   - m_Id: 1032566265765888
-    m_Localized: add group
+    m_Localized: Add group
     m_Metadata:
       m_Items: []
   - m_Id: 1032659924574208
-    m_Localized: go back
+    m_Localized: Go back
     m_Metadata:
       m_Items: []
   - m_Id: 1036099220299776
-    m_Localized: already exists!!
+    m_Localized: Account already exists!
     m_Metadata:
       m_Items: []
   - m_Id: 1036108732981248
@@ -266,11 +266,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1038288512770048
-    m_Localized: go back
+    m_Localized: Go back
     m_Metadata:
       m_Items: []
   - m_Id: 1038282594607104
-    m_Localized: more setttings
+    m_Localized: "More settings \u2026\r"
     m_Metadata:
       m_Items: []
   - m_Id: 1038713492234240
@@ -278,15 +278,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1039649417617408
-    m_Localized: group name
+    m_Localized: Group name
     m_Metadata:
       m_Items: []
   - m_Id: 1040000967401472
-    m_Localized: rename group
+    m_Localized: Rename group
     m_Metadata:
       m_Items: []
   - m_Id: 1040099533545472
-    m_Localized: go back
+    m_Localized: Go back
     m_Metadata:
       m_Items: []
   - m_Id: 1040278718406656
@@ -294,7 +294,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1040462818992128
-    m_Localized: go back
+    m_Localized: Go back
     m_Metadata:
       m_Items: []
   - m_Id: 1042057313017856
@@ -303,7 +303,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1046226455388160
-    m_Localized: go back
+    m_Localized: Go back
     m_Metadata:
       m_Items: []
   - m_Id: 2231072804462592
@@ -347,15 +347,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 130050770668781568
-    m_Localized: set PA-message
+    m_Localized: Compose PA-message
     m_Metadata:
       m_Items: []
   - m_Id: 130051405531217920
-    m_Localized: go back
+    m_Localized: Go back
     m_Metadata:
       m_Items: []
   - m_Id: 130053735374815232
-    m_Localized: pedagogical agent advice
+    m_Localized: "PA-advice\r"
     m_Metadata:
       m_Items: []
   - m_Id: 130054449580900352
@@ -363,7 +363,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 130054775037919232
-    m_Localized: go back
+    m_Localized: Go back
     m_Metadata:
       m_Items: []
   - m_Id: 130055180400623616
@@ -375,32 +375,32 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 130057256568520704
-    m_Localized: update PA-message
+    m_Localized: Update PA-message
     m_Metadata:
       m_Items: []
   - m_Id: 130057725424599040
-    m_Localized: delete PA-message
+    m_Localized: Delete PA-message
     m_Metadata:
       m_Items: []
   - m_Id: 130057962776068096
-    m_Localized: change PA-message
+    m_Localized: Change PA-message
     m_Metadata:
       m_Items: []
   - m_Id: 130058592991215616
-    m_Localized: pedagogical agent advice
+    m_Localized: "PA-advice\r"
     m_Metadata:
       m_Items: []
   - m_Id: 130059176074969088
-    m_Localized: update deadline
+    m_Localized: Update deadline
     m_Metadata:
       m_Items: []
   - m_Id: 130063730690654208
-    m_Localized: set deadline
+    m_Localized: Set deadline
     m_Metadata:
       m_Items: []
   - m_Id: 130070703142240256
-    m_Localized: '"The treshold value of {0} is {2}. Crossing means that the student
-      has judged {1} much {4} then his/her fellow group members." '
+    m_Localized: '"The treshold value of {0} is {2}. Crossing this threshold means
+      that the student has judged {1} much {4} then his/her fellow group members." '
     m_Metadata:
       m_Items: []
   - m_Id: 130088078524710912

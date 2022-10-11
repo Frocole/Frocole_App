@@ -824,16 +824,16 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: Template_3D
-  metroPackageVersion: 
-  metroCertificatePath: 
+  metroPackageName: Template3D
+  metroPackageVersion: 1.0.0.0
+  metroCertificatePath: C:\Unity\Frocole_App\Frocole_UnityProject\Assets\WSATestCertificate.pfx
   metroCertificatePassword: 
-  metroCertificateSubject: 
-  metroCertificateIssuer: 
-  metroCertificateNotAfter: 0000000000000000
+  metroCertificateSubject: XRgroup
+  metroCertificateIssuer: XRgroup
+  metroCertificateNotAfter: 00c5b60f5bfcd901
   metroApplicationDescription: Template_3D
   wsaImages: {}
-  metroTileShortName: 
+  metroTileShortName: Frocole
   metroTileShowName: 0
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0
