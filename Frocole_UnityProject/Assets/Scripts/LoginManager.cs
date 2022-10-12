@@ -126,13 +126,37 @@ public class LoginManager : MonoBehaviour
 
     /// <summary>
     /// Sets web adress.
+    /// 
+    /// Responds to moving focus with tapping/clicking on mobile & editor.
     /// </summary>
     ///
     /// <param name="newURL"> URL of the new. </param>
     public void SetWebAdress(string newURL)
     {
+#if !(UNITY_STANDALONE_WIN || WINDOWS_UWP)
         //PersistentData.Instance.SetWebAdress(newURL);
+        Debug.Log($"Checking Server Url: {newURL} (onSubmit).");
+
         StartCoroutine(VerifyServer(newURL));
+#endif
+    }
+
+    /// <summary>
+    /// Ends an edit, Sets web adress.
+    /// 
+    /// Responds to moving focus with tapping/clicking/enter on Windows.
+    /// </summary>
+    ///
+    /// <exception cref="Exception"> Thrown when an exception error condition occurs. </exception>
+    ///
+    /// <param name="input"> The input. </param>
+    public void EndEdit(string input)
+    {
+#if UNITY_STANDALONE_WIN || WINDOWS_UWP
+        Debug.Log($"Checking Server Url: {input} (onEndEdit).");
+
+        StartCoroutine(VerifyServer(input));
+#endif
     }
 
     /// <summary>
@@ -316,6 +340,7 @@ public class LoginManager : MonoBehaviour
     {
         _persistentLoginDataManager = PersistentData.Instance.LoginDataManager;
         WebAdressInputfield.SetTextWithoutNotify(PersistentData.WebAdress);
+        
         if (PlayerPrefs.HasKey(PersistentData.FROCOLE_USERNAME)) UsernameInputField.SetTextWithoutNotify(PlayerPrefs.GetString(PersistentData.FROCOLE_USERNAME));
 
         AttemptAutoLogin();
@@ -383,5 +408,5 @@ public class LoginManager : MonoBehaviour
         LoadingOverlay.RemoveLoader();
     }
 
-    #endregion Methods
+#endregion Methods
 }
