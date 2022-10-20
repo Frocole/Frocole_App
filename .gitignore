@@ -12,6 +12,13 @@
 sysinfo.txt
 # Unity3D generated meta files
 *.pidb.meta
+
+##
+# Frocole app excludes
+##
+KeyStore/
+KeyStore.meta
+
 EncryptionKey.cs
 EncryptionKey.cs.meta
 
