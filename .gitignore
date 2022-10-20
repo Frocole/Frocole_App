@@ -19,6 +19,9 @@ sysinfo.txt
 KeyStore/
 KeyStore.meta
 
+[Bb]uilds/
+
+
 EncryptionKey.cs
 EncryptionKey.cs.meta
 
