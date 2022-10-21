@@ -49,6 +49,11 @@ public class GetInfoFromDatabase : MonoBehaviour
 
     #region Methods
 
+    string connectionPrefix = "Momenteel is de app verbonden met {0}. Hieronder vindt u extra informatie aangeleverd door dit domein.";
+    string noConnectionPrefix = "De extra informatie kan niet worden opgehaald. Er is door u geen valide Frocole server adres opgegeven";
+    public void SetConnectionPrefix(string Text) => connectionPrefix = Text;
+    public void SetNoConnectionPrefix(string Text) => noConnectionPrefix = Text;
+
     /// <summary>
     /// Downloads the information text.
     /// </summary>
@@ -65,13 +70,13 @@ public class GetInfoFromDatabase : MonoBehaviour
 
         if (WWW.downloadHandler.text != "")
         {
-            infotext.text += "Momenteel is de app verbonden met " + PersistentData.WebAdress + ". Hieronder vindt u extra informatie aangeleverd door dit domein. \n \n";
+            infotext.text += string.Format(connectionPrefix, PersistentData.WebAdress) + "\n \n";
 
             infotext.text += WWW.downloadHandler.text;
         }
         else 
         {
-            infotext.text += "De extra informatie kan niet worden opgehaald. Er is door u geen valide Frocole server adres opgegeven";
+            infotext.text += noConnectionPrefix;
         }
 
         WWW.Dispose();

@@ -72,23 +72,7 @@ MonoBehaviour:
       guarantee that the app will always function flawlessly. Should the app (temporarily)
       not function as it should, the Open Universiteit is in no way liable for any
       direct, indirect, incidental, accidental or consequential damage caused by
-      the use of the app, regardless of how such damage arose. \r\n\r\nTo use this
-      app, you must connect to a Frocole web address. These addresses are issued
-      by institutes or organizations to facilitate the use of this app in closed
-      circles. If this app was provided to you by an institute or organization, that
-      party should also be able to provide a corresponding web address.\r\n\r\nIf
-      you are interested in providing Frocole web address yourself, please contact
-      frocole@ou.nl or visit https://frocole.ou.nl for taking the necessary steps.\r\n\r\nPLEASE
-      NOTE, when you connect to a Frocole web address, you are connecting to third
-      parties. It is therefore important that you trust the providing party. By using
-      the app, you are sharing the following data with third parties: your username,
-      alias, participation in courses and groups within the app, and your feedback
-      within these groups. Your password is immediately secured by the app (by means
-      of SHA256 - hashing, among others) and your unsecured password is not stored
-      anywhere or shared with third parties.\" Thus, no personal data such as email
-      address, gender or year of birth is requested and shared. \r\n\r\n\r\nKreijns,
-      K., Henderikx, M. & van der Vegt, W. (2022). Feedback and reflection in online
-      collaborative learning (FROCOLE) (Version 1.2.5)\r [Mobile app]\n\r\n\r\n"
+      the use of the app, regardless of how such damage arose. \r\n"
     m_Metadata:
       m_Items: []
   - m_Id: 364703561441280
@@ -417,6 +401,41 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 130088880425304064
     m_Localized: the group
+    m_Metadata:
+      m_Items: []
+  - m_Id: 140530455668310016
+    m_Localized: 'To use this app, you must connect to a Frocole web address. These
+      addresses are set up by institutes or organizations to facilitate the use of
+      this app in closed circles. if this app was provided to you by an institute
+      or organization, that party should also be able to provide a corresponding
+      web address.
+
+
+
+      If you are interested in providing Frocole web address
+      yourself, please contact frocole@ou.nl or visit https://frocole.ou.nl for the
+      necessary steps.
+
+
+
+      PLEASE NOTE, when you connect to a Frocole web address,
+      you are connecting to third parties. It is therefore important that you trust
+      the providing party. By using the app, you are sharing the following data with
+      third parties: your username, alias, participation in courses and groups within
+      the app, and your feedback within these groups. Your password is immediately
+      secured by the app (by means of SHA256 - hashing, among others) and your unsecured
+      password is not stored anywhere or shared with third parties." Thus, no personal
+      data such as email address, gender or year of birth is requested and shared.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 140537222057934848
+    m_Localized: Currently, the app is connected to {0}. Below is additional information
+      supplied by this domain.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 140538976652738560
+    m_Localized: The additional information cannot be retrieved. No valid Frocole
+      server address was provided by you.
     m_Metadata:
       m_Items: []
   references:

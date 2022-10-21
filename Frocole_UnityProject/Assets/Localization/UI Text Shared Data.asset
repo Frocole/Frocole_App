@@ -15,100 +15,36 @@ MonoBehaviour:
   m_TableCollectionName: UI Text
   m_TableCollectionNameGuidString: 45874e20ece930042971a614bcdec135
   m_Entries:
-  - m_Id: 367093387780096
-    m_Key: TB_terug
-    m_Metadata:
-      m_Items: []
-  - m_Id: 359600934772736
-    m_Key: TB_log uit
-    m_Metadata:
-      m_Items: []
-  - m_Id: 364703561441280
-    m_Key: TB_log in
-    m_Metadata:
-      m_Items: []
-  - m_Id: 2481748336640
-    m_Key: TB_info
-    m_Metadata:
-      m_Items: []
-  - m_Id: 359519473000448
-    m_Key: TB_account
-    m_Metadata:
-      m_Items: []
-  - m_Id: 368737156489216
-    m_Key: 02_inloggen
-    m_Metadata:
-      m_Items: []
-  - m_Id: 362113868128256
-    m_Key: 06_Info
-    m_Metadata:
-      m_Items: []
-  - m_Id: 62314405888
-    m_Key: 05_ga terug
-    m_Metadata:
-      m_Items: []
-  - m_Id: 360236657041408
-    m_Key: 04_wijzig
-    m_Metadata:
-      m_Items: []
-  - m_Id: 359803653873664
-    m_Key: 04_mijn cursussen
-    m_Metadata:
-      m_Items: []
-  - m_Id: 364905705922560
-    m_Key: 03_web_adres
-    m_Metadata:
-      m_Items: []
-  - m_Id: 366438724034560
-    m_Key: 03_wachtwoord bewaren
-    m_Metadata:
-      m_Items: []
-  - m_Id: 365842231091200
-    m_Key: 03_wachtwoord
-    m_Metadata:
-      m_Items: []
-  - m_Id: 366319777767424
-    m_Key: 03_herhaal wachtwoord
-    m_Metadata:
-      m_Items: []
-  - m_Id: 365700463616000
-    m_Key: 03_gebruikersnaam
-    m_Metadata:
-      m_Items: []
-  - m_Id: 365439359803392
-    m_Key: 03_alias
-    m_Metadata:
-      m_Items: []
-  - m_Id: 366655007514624
-    m_Key: 03_account aanmaken
-    m_Metadata:
-      m_Items: []
-  - m_Id: 233664307200
-    m_Key: 00_opnieuw verbinden
+  - m_Id: 188428738560
+    m_Key: 00_error
     m_Metadata:
       m_Items: []
   - m_Id: 193046667264
     m_Key: 00_laden
     m_Metadata:
       m_Items: []
-  - m_Id: 188428738560
-    m_Key: 00_error
+  - m_Id: 233664307200
+    m_Key: 00_opnieuw verbinden
     m_Metadata:
       m_Items: []
   - m_Id: 368930371297280
     m_Key: 02_error
     m_Metadata:
       m_Items: []
+  - m_Id: 369544656478208
+    m_Key: 02_gebruikersnaam
+    m_Metadata:
+      m_Items: []
+  - m_Id: 368737156489216
+    m_Key: 02_inloggen
+    m_Metadata:
+      m_Items: []
   - m_Id: 369113993732096
     m_Key: 02_no server
     m_Metadata:
       m_Items: []
-  - m_Id: 369416453382144
-    m_Key: 02_webadres
-    m_Metadata:
-      m_Items: []
-  - m_Id: 369544656478208
-    m_Key: 02_gebruikersnaam
+  - m_Id: 370091056848896
+    m_Key: 02_success
     m_Metadata:
       m_Items: []
   - m_Id: 369899058388992
@@ -119,20 +55,76 @@ MonoBehaviour:
     m_Key: 02_wachtwoord bewaren
     m_Metadata:
       m_Items: []
-  - m_Id: 370091056848896
-    m_Key: 02_success
+  - m_Id: 369416453382144
+    m_Key: 02_webadres
+    m_Metadata:
+      m_Items: []
+  - m_Id: 366655007514624
+    m_Key: 03_account aanmaken
+    m_Metadata:
+      m_Items: []
+  - m_Id: 365439359803392
+    m_Key: 03_alias
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1036099220299776
+    m_Key: 03_bestaat al!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 365700463616000
+    m_Key: 03_gebruikersnaam
+    m_Metadata:
+      m_Items: []
+  - m_Id: 366319777767424
+    m_Key: 03_herhaal wachtwoord
+    m_Metadata:
+      m_Items: []
+  - m_Id: 365842231091200
+    m_Key: 03_wachtwoord
+    m_Metadata:
+      m_Items: []
+  - m_Id: 366438724034560
+    m_Key: 03_wachtwoord bewaren
+    m_Metadata:
+      m_Items: []
+  - m_Id: 364905705922560
+    m_Key: 03_web_adres
+    m_Metadata:
+      m_Items: []
+  - m_Id: 359803653873664
+    m_Key: 04_mijn cursussen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 360236657041408
+    m_Key: 04_wijzig
     m_Metadata:
       m_Items: []
   - m_Id: 373389298130944
     m_Key: 05_cursussen
     m_Metadata:
       m_Items: []
-  - m_Id: 374691017154560
-    m_Key: C01_no group found
+  - m_Id: 62314405888
+    m_Key: 05_ga terug
     m_Metadata:
       m_Items: []
-  - m_Id: 374922777616384
-    m_Key: C01_selecteer een diagram
+  - m_Id: 362113868128256
+    m_Key: 06_Info_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 140530455668310016
+    m_Key: 06_Info_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 140537222057934848
+    m_Key: 06_Info_Verbonden_Server
+    m_Metadata:
+      m_Items: []
+  - m_Id: 375387934318592
+    m_Key: C01_feedback delen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 375255180402688
+    m_Key: C01_ga terug
     m_Metadata:
       m_Items: []
   - m_Id: 375040570449920
@@ -143,20 +135,24 @@ MonoBehaviour:
     m_Key: C01_Individuele feedback
     m_Metadata:
       m_Items: []
-  - m_Id: 375255180402688
-    m_Key: C01_ga terug
+  - m_Id: 374691017154560
+    m_Key: C01_no group found
     m_Metadata:
       m_Items: []
-  - m_Id: 375387934318592
-    m_Key: C01_feedback delen
+  - m_Id: 374922777616384
+    m_Key: C01_selecteer een diagram
+    m_Metadata:
+      m_Items: []
+  - m_Id: 377572097155072
+    m_Key: C02_ga terug
     m_Metadata:
       m_Items: []
   - m_Id: 377387094794240
     m_Key: C02_groep
     m_Metadata:
       m_Items: []
-  - m_Id: 377572097155072
-    m_Key: C02_ga terug
+  - m_Id: 379018481917952
+    m_Key: C03_drag slider
     m_Metadata:
       m_Items: []
   - m_Id: 378573176856576
@@ -165,131 +161,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 378919831887872
     m_Key: C03_ga terug
-    m_Metadata:
-      m_Items: []
-  - m_Id: 379018481917952
-    m_Key: C03_drag slider
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1029236286185472
-    m_Key: L01_groep
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1029416121163776
-    m_Key: L01_ga terug
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1029646463950848
-    m_Key: L01_voeg groep toe
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1030741802246144
-    m_Key: L02_selecteer een diagram
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1030881397071872
-    m_Key: L02_Groepsfeedback
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1031088230785024
-    m_Key: L02_Individuele feedback
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1031392745644032
-    m_Key: L02_ga terug
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1031636321460224
-    m_Key: L03_groep
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1032241043628032
-    m_Key: L03_groepnaam
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1032566265765888
-    m_Key: L03_groep toevoegen
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1032659924574208
-    m_Key: L03_ga terug
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1036099220299776
-    m_Key: 03_bestaat al!
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1036108732981248
-    m_Key: L04_cursist
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1038282594607104
-    m_Key: L04_meer instellingen
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1038288512770048
-    m_Key: L04_ga terug
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1038713492234240
-    m_Key: L05_groep
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1039649417617408
-    m_Key: L05_groepnaam
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1040000967401472
-    m_Key: L05_groep hernoemen
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1040099533545472
-    m_Key: L05_ga terug
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1040278718406656
-    m_Key: L06_groep
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1040462818992128
-    m_Key: L06_ga terug
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1042057313017856
-    m_Key: L07_U kunt de gemiddelde feedback van de groep op die persoon uitlezen
-      en indien aangevinkt, de zelffeedback van de betreffende persoon
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1046226455388160
-    m_Key: L07_ga terug
-    m_Metadata:
-      m_Items: []
-  - m_Id: 2231072804462592
-    m_Key: GPF_RD_L07_L2
-    m_Metadata:
-      m_Items: []
-  - m_Id: 2231077263007744
-    m_Key: IPF_RD_L07_L2
-    m_Metadata:
-      m_Items: []
-  - m_Id: 2234126668816384
-    m_Key: GPF_RD_L07_L3
-    m_Metadata:
-      m_Items: []
-  - m_Id: 2234160542015488
-    m_Key: IPF_RD_L07_L3
-    m_Metadata:
-      m_Items: []
-  - m_Id: 2514021546352640
-    m_Key: IPF_RD_C03_L1
-    m_Metadata:
-      m_Items: []
-  - m_Id: 2514143185362944
-    m_Key: IPF_RD_C03_L2
-    m_Metadata:
-      m_Items: []
-  - m_Id: 2514197832949760
-    m_Key: IPF_RD_C03_L3
     m_Metadata:
       m_Items: []
   - m_Id: 2514572371714048
@@ -304,12 +175,133 @@ MonoBehaviour:
     m_Key: GPF_RD_C03_L3
     m_Metadata:
       m_Items: []
-  - m_Id: 130050770668781568
-    m_Key: L08_PA-bericht maken
+  - m_Id: 2231072804462592
+    m_Key: GPF_RD_L07_L2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2234126668816384
+    m_Key: GPF_RD_L07_L3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2514021546352640
+    m_Key: IPF_RD_C03_L1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2514143185362944
+    m_Key: IPF_RD_C03_L2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2514197832949760
+    m_Key: IPF_RD_C03_L3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2231077263007744
+    m_Key: IPF_RD_L07_L2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2234160542015488
+    m_Key: IPF_RD_L07_L3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 130063730690654208
+    m_Key: L01_deadline
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1029416121163776
+    m_Key: L01_ga terug
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1029236286185472
+    m_Key: L01_groep
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1029646463950848
+    m_Key: L01_voeg groep toe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1031392745644032
+    m_Key: L02_ga terug
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1030881397071872
+    m_Key: L02_Groepsfeedback
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1031088230785024
+    m_Key: L02_Individuele feedback
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1030741802246144
+    m_Key: L02_selecteer een diagram
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1032659924574208
+    m_Key: L03_ga terug
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1031636321460224
+    m_Key: L03_groep
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1032566265765888
+    m_Key: L03_groep toevoegen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1032241043628032
+    m_Key: L03_groepnaam
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1036108732981248
+    m_Key: L04_cursist
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1038288512770048
+    m_Key: L04_ga terug
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1038282594607104
+    m_Key: L04_meer instellingen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1040099533545472
+    m_Key: L05_ga terug
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1038713492234240
+    m_Key: L05_groep
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1040000967401472
+    m_Key: L05_groep hernoemen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1039649417617408
+    m_Key: L05_groepnaam
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1040462818992128
+    m_Key: L06_ga terug
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1040278718406656
+    m_Key: L06_groep
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1046226455388160
+    m_Key: L07_ga terug
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1042057313017856
+    m_Key: L07_U kunt de gemiddelde feedback van de groep op die persoon uitlezen
+      en indien aangevinkt, de zelffeedback van de betreffende persoon
     m_Metadata:
       m_Items: []
   - m_Id: 130051405531217920
     m_Key: "L08_ga terug\t"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 130050770668781568
+    m_Key: L08_PA-bericht maken
     m_Metadata:
       m_Items: []
   - m_Id: 130053735374815232
@@ -320,12 +312,28 @@ MonoBehaviour:
     m_Key: L09_advies
     m_Metadata:
       m_Items: []
+  - m_Id: 130057962776068096
+    m_Key: L09_advies aanpassen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 130088880425304064
+    m_Key: L09_de groep
+    m_Metadata:
+      m_Items: []
+  - m_Id: 130070703142240256
+    m_Key: L09_description
+    m_Metadata:
+      m_Items: []
   - m_Id: 130054775037919232
     m_Key: L09_go back
     m_Metadata:
       m_Items: []
-  - m_Id: 130055180400623616
-    m_Key: L09_vul hier advies in voor deze situatie
+  - m_Id: 130088078524710912
+    m_Key: L09_hoger
+    m_Metadata:
+      m_Items: []
+  - m_Id: 130088264344961024
+    m_Key: L09_lager
     m_Metadata:
       m_Items: []
   - m_Id: 130055554666758144
@@ -340,8 +348,12 @@ MonoBehaviour:
     m_Key: L09_verwijderen
     m_Metadata:
       m_Items: []
-  - m_Id: 130057962776068096
-    m_Key: L09_advies aanpassen
+  - m_Id: 130055180400623616
+    m_Key: L09_vul hier advies in voor deze situatie
+    m_Metadata:
+      m_Items: []
+  - m_Id: 130088807842873344
+    m_Key: L09_zichzelf
     m_Metadata:
       m_Items: []
   - m_Id: 130058592991215616
@@ -352,28 +364,28 @@ MonoBehaviour:
     m_Key: L10_upload deadline
     m_Metadata:
       m_Items: []
-  - m_Id: 130063730690654208
-    m_Key: L01_deadline
+  - m_Id: 140538976652738560
+    m_Key: 06_Info_No_Server
     m_Metadata:
       m_Items: []
-  - m_Id: 130070703142240256
-    m_Key: L09_description
+  - m_Id: 359519473000448
+    m_Key: TB_account
     m_Metadata:
       m_Items: []
-  - m_Id: 130088078524710912
-    m_Key: L09_hoger
+  - m_Id: 2481748336640
+    m_Key: TB_info
     m_Metadata:
       m_Items: []
-  - m_Id: 130088264344961024
-    m_Key: L09_lager
+  - m_Id: 364703561441280
+    m_Key: TB_log in
     m_Metadata:
       m_Items: []
-  - m_Id: 130088807842873344
-    m_Key: L09_zichzelf
+  - m_Id: 359600934772736
+    m_Key: TB_log uit
     m_Metadata:
       m_Items: []
-  - m_Id: 130088880425304064
-    m_Key: L09_de groep
+  - m_Id: 367093387780096
+    m_Key: TB_terug
     m_Metadata:
       m_Items: []
   m_Metadata:

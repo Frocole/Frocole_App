@@ -71,23 +71,7 @@ MonoBehaviour:
       niet naar behoren functioneren dan is de OU op geen enkele manier aansprakelijk
       voor directe, indirecte, incidentele, toevallige of gevolgschade die ontstaat
       door het gebruik van de app, ongeacht de wijze waarop deze schade is ontstaan.
-      \r\n\r\nOm gebruik te maken van deze app moet u verbinden met een Frocole web-adres.
-      Deze adressen worden door instituten of organisaties opgezet om het gebruik
-      van deze app in besloten kringen te faciliteren. als deze app u is aangereikt
-      door een instituut of organisatie, dan zou deze partij ook een bijbehorend
-      web-adres moeten kunnen aanreiken.\r\n\r\nBent u zelf ge\xEFnteresseerd in
-      het verstrekken van  Frocole web-adres? neemt u dan contact op met frocole@ou.nl
-      of kijkt u op https://frocole.ou.nl voor de nodige stappen.\r\n\n\n\r\nLET
-      OP, als u verbinding maakt met een Frocole web-adres, verbind u met derden.
-      Het is daarom belangrijk dat u de verstrekkende partij vertrouwd. Met het gebruik
-      van de app deelt u de volgende gegevens met derden: uw gebruikersnaam, alias,
-      deelname aan cursussen en groepen binnen de app, en uw gegeven feedback binnen
-      deze groepen. Uw wachtwoord wordt door de app meteen beveiligd (door middel
-      van onder andere SHA256 - hashing) en uw onbeveiligde wachtwoord wordt nergens
-      opgeslagen of gedeeld met derden.\" Er worden dus geen persoonsgegevens zoals
-      emailadres, geslacht of geboortejaar gevraagd en gedeeld. \r\n\r\nKreijns,
-      K., Henderikx, M. & van der Vegt, W. (2022). Feedback and reflection in online
-      collaborative learning (FROCOLE) (Version 1.2.5) [Mobile app]. Frocole. https://frocole.ou.nl/\n\n\n"
+      \r"
     m_Metadata:
       m_Items: []
   - m_Id: 364703561441280
@@ -416,6 +400,42 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 130088880425304064
     m_Localized: de groep
+    m_Metadata:
+      m_Items: []
+  - m_Id: 140530455668310016
+    m_Localized: "Om gebruik te maken van deze app moet u verbinden met een Frocole
+      web-adres. Dit adres wordt door instituten of organisaties opgezet om het gebruik
+      van deze app in besloten kringen te faciliteren. Als deze app u is aangereikt
+      door een instituut of organisatie, dan zou deze partij ook een bijbehorend
+      web-adres moeten kunnen aanreiken.\r\n\r\nEr is alles aan gedaan om te zorgen
+      voor een veilige, toegankelijke en gebruiksvriendelijke app die het feedback
+      en reflectieproces van samenwerkende groepen ondersteund met als doel de samenwerking
+      tussen groepsleden te optimaliseren en vaak gehoorde problemen zoals meeliftgedrag
+      en uiteenlopende verwachtingen te voorkomen. Echter, de makers van de app kunnen
+      niet garanderen dat de app altijd foutloos functioneert. Mocht de app (tijdelijk)
+      niet naar behoren functioneren dan is de OU op geen enkele manier aansprakelijk
+      voor directe, indirecte, incidentele, toevallige of gevolgschade die ontstaat
+      door het gebruik van de app, ongeacht de wijze waarop deze schade is ontstaan.\r\n\r\nLET
+      OP, als u verbinding maakt met een Frocole web-adres, verbind u met derden.
+      Het is daarom belangrijk dat u de verstrekkende partij vertrouwd. Met het gebruik
+      van de app deelt u de volgende gegevens met derden: uw gebruikersnaam, alias,
+      deelname aan cursussen en groepen binnen de app en uw gegeven feedback binnen
+      deze groepen.\r\nUw wachtwoord wordt door de app meteen beveiligd (door middel
+      van onder andere SHA256 - hashing) en wordt nergens opgeslagen of gedeeld met
+      derden. Er worden dus geen persoonsgegevens zoals emailadres, geslacht of geboortejaar
+      gevraagd en gedeeld.\r\n\r\nBent u zelf ge\xEFnteresseerd in het inzetten van
+      de FROCOLE app en het verstrekken van een Frocole web-adres? Neemt u dan contact
+      op met frocole@ou.nl"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 140537222057934848
+    m_Localized: Momenteel is de app verbonden met  {0}. Hieronder vindt u extra
+      informatie aangeleverd door dit domein.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 140538976652738560
+    m_Localized: "De extra informatie kan niet worden opgehaald. Er is door u geen
+      valide Frocole server adres opgegeven. \r"
     m_Metadata:
       m_Items: []
   references:
