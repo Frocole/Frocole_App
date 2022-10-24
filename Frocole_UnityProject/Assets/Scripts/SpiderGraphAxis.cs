@@ -114,7 +114,7 @@ public class SpiderGraphAxis : MonoBehaviour
                 SpidergraphAxisName.rectTransform.sizeDelta = new Vector3(250, 100);
                 //SpidergraphAxisName.rectTransform.localPosition -= new Vector3(50, 0);
                 TextBackground.GetComponent<RectTransform>().localPosition -= new Vector3(50, 0);
-                TextBackground.sizeDelta = new Vector3(300/*SpidergraphAxisName.preferredWidth*/, SpidergraphAxisName.preferredHeight + 20);
+                TextBackground.sizeDelta = new Vector3(/*300/**/SpidergraphAxisName.preferredWidth/**/, SpidergraphAxisName.preferredHeight + 20);
             }
         }else
         if (MyAngle < -225 && MyAngle > -315)

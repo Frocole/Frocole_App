@@ -63,6 +63,9 @@ EditorBuildSettings:
     path: Assets/Scenes/L_07_IPF-RD.unity
     guid: 308cb96e6a0a13b429c1cc092b974b21
   - enabled: 1
+    path: Assets/Scenes/L_07_PF-RD.unity
+    guid: e0a85b08fd74d504493359ed18495d66
+  - enabled: 1
     path: Assets/Scenes/L_07_GPF-RD.unity
     guid: 9a18650a62c89794186a8ee8dfa51df7
   - enabled: 1

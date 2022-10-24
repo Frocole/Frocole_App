@@ -163,7 +163,7 @@ public class FillProfile : MonoBehaviour
 
         foreach (CompiledFeedbackOnSubjectFromSource source in compiledFeedback.Sources)
         {
-            if (!(source.Source == UserDataManagerReference.UserData.UserID && type == SpiderGraph.FeedbackType.GPF_RD))
+            if (!(source.Source == UserDataManagerReference.UserData.UserID && type == SpiderGraph.FeedbackType.GPF_RD) && source.Source != UserDataManagerReference.CourseData.LeraarUserID)
             {
                 for (int i = 0; i < compiledFeedback.parameters.Length; i++)
                 {
@@ -196,13 +196,21 @@ public class FillProfile : MonoBehaviour
             case SpiderGraph.FeedbackType.GPF_RD:
                 compiledFeedback.parameters = UserDataManagerReference.CourseData.GPF_RD_parameters.Split('/');
                 break;
+
+            case SpiderGraph.FeedbackType.PF_RD:
+                compiledFeedback.parameters = UserDataManagerReference.CourseData.PF_RD_parameters.Split('/');
+                break;
         }
 
         compiledFeedback.Sources = new List<CompiledFeedbackOnSubjectFromSource>();
         foreach (var contributor in UserDataManagerReference.SubjectData.Contributors)
         {
             CompiledFeedbackOnSubjectFromSource NewSource = new CompiledFeedbackOnSubjectFromSource();
+
+
             NewSource.Source = contributor;
+
+            
             NewSource.parameterValues = new int[compiledFeedback.parameters.Length];
 
             for (int i = 0; i < compiledFeedback.parameters.Length; i++)

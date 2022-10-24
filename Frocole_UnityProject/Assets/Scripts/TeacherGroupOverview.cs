@@ -38,6 +38,7 @@ public class TeacherGroupOverview : MonoBehaviour
     /// The gpfrd selector.
     /// </summary>
     public SubjectSelector GPFRDSelector;
+    public SubjectSelector PFRDSelector;
 
     /// <summary>
     /// The root user object.
@@ -109,10 +110,16 @@ public class TeacherGroupOverview : MonoBehaviour
         GPFRDSelector.ThisSubject.SubjectID = "GPF" + _persistentLoginDataManager.GroupData.GroupID;
         GPFRDSelector.ThisSubject.SubjectName = _persistentLoginDataManager.GroupData.GroupNickname;
 
+        PFRDSelector.ButtonLabel.text = _persistentLoginDataManager.GroupData.GroupNickname;
+        PFRDSelector.ThisSubject.Contributors = contributors.ToArray();
+        PFRDSelector.ThisSubject.FeedbackType = SpiderGraph.FeedbackType.PF_RD;
+        PFRDSelector.ThisSubject.SubjectID = "PF" + _persistentLoginDataManager.GroupData.GroupID;
+
+
         LoadingOverlay.RemoveLoader();
     }
 
-    //private int YOffset = 500;
+    // private int YOffset = 500;
 
     /// <summary>
     /// Start is called just before any of the Update methods is called the first time.
