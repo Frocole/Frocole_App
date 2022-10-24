@@ -33,60 +33,9 @@ using UnityEngine.Networking;
 /// <summary>
 /// A fill profile.
 /// </summary>
-public class FillProfile : MonoBehaviour
+public class FillProfileDate : MonoBehaviour
 {
-
-/// <summary>
-/// A compiled feedback on subject.
-/// </summary>
-[System.Serializable]
-public struct CompiledFeedbackOnSubject
-{
-    #region Fields
-
-    /// <summary>
-    /// Options for controlling the operation.
-    /// </summary>
-    public string[] parameters;
-
-    /// <summary>
-    /// The sources.
-    /// </summary>
-    public List<CompiledFeedbackOnSubjectFromSource> Sources;
-
-    /// <summary>
-    /// The subject.
-    /// </summary>
-    public string Subject;
-
-    #endregion Fields
-}
-
-/// <summary>
-/// A compiled feedback on subject from source.
-/// </summary>
-[System.Serializable]
-public struct CompiledFeedbackOnSubjectFromSource
-{
-    #region Fields
-
-    /// <summary>
-    /// The parameter values.
-    /// </summary>
-    public int[] parameterValues;
-
-    /// <summary>
-    /// Source for the.
-    /// </summary>
-    public string Source;
-
-    #endregion Fields
-}
-
-
-
-
-
+    public string TestDatePicker = "2022-10-20";
 
 
     #region Fields
@@ -98,7 +47,7 @@ public struct CompiledFeedbackOnSubjectFromSource
     /// <summary>
     /// The compiled feedback.
     /// </summary>
-    public CompiledFeedbackOnSubject compiledFeedback;
+    public FillProfile.CompiledFeedbackOnSubject compiledFeedback;
 
     /// <summary>
     /// The display feedback from.
@@ -170,7 +119,7 @@ public struct CompiledFeedbackOnSubjectFromSource
         int[] Averages = new int[compiledFeedback.parameters.Length];
         int[] weight = new int[compiledFeedback.parameters.Length];
 
-        foreach (CompiledFeedbackOnSubjectFromSource source in compiledFeedback.Sources)
+        foreach (FillProfile.CompiledFeedbackOnSubjectFromSource source in compiledFeedback.Sources)
         {
             if (!(source.Source == UserDataManagerReference.UserData.UserID && type == SpiderGraph.FeedbackType.GPF_RD) && source.Source != UserDataManagerReference.CourseData.LeraarUserID)
             {
@@ -193,7 +142,7 @@ public struct CompiledFeedbackOnSubjectFromSource
     /// </summary>
     public void CompileFeedback()
     {
-        compiledFeedback = new CompiledFeedbackOnSubject();
+        compiledFeedback = new FillProfile.CompiledFeedbackOnSubject();
         compiledFeedback.Subject = UserDataManagerReference.SubjectData.SubjectID;
 
         switch (UserDataManagerReference.SubjectData.FeedbackType)
@@ -211,10 +160,10 @@ public struct CompiledFeedbackOnSubjectFromSource
                 break;
         }
 
-        compiledFeedback.Sources = new List<CompiledFeedbackOnSubjectFromSource>();
+        compiledFeedback.Sources = new List<FillProfile.CompiledFeedbackOnSubjectFromSource>();
         foreach (var contributor in UserDataManagerReference.SubjectData.Contributors)
         {
-            CompiledFeedbackOnSubjectFromSource NewSource = new CompiledFeedbackOnSubjectFromSource();
+            FillProfile.CompiledFeedbackOnSubjectFromSource NewSource = new FillProfile.CompiledFeedbackOnSubjectFromSource();
 
 
             NewSource.Source = contributor;
@@ -270,18 +219,18 @@ public struct CompiledFeedbackOnSubjectFromSource
         {
             switch (profile.feedbackSource)
             {
-                case FeedbackSource.GroupAverage:
+                case FillProfile.FeedbackSource.GroupAverage:
                     profile.Scores = AverageScores();
                     break;
 
-                case FeedbackSource.MyFeedback:
+                case FillProfile.FeedbackSource.MyFeedback:
                     profile.Scores = compiledFeedback.Sources.Find(x => x.Source == UserDataManagerReference.UserData.UserID).parameterValues;
                     break;
 
-                case FeedbackSource.TeacherFeedback:
+                case FillProfile.FeedbackSource.TeacherFeedback:
                     profile.Scores = compiledFeedback.Sources.Find(x => x.Source == UserDataManagerReference.CourseData.LeraarUserID).parameterValues;
                     break;
-                case FeedbackSource.SelfReflection:
+                case FillProfile.FeedbackSource.SelfReflection:
                     if (LeraarOverride || (UserDataManagerReference.SubjectData.Public && UserDataManagerReference.SubjectData.FeedbackType == SpiderGraph.FeedbackType.IPF_RD && UserDataManagerReference.GroupData.Public == "1"))
                         profile.Scores = compiledFeedback.Sources.Find(x => x.Source == UserDataManagerReference.SubjectData.SubjectID).parameterValues;
                     break;
@@ -312,7 +261,7 @@ public struct CompiledFeedbackOnSubjectFromSource
     /// <summary>
     /// Start is called just before any of the Update methods is called the first time.
     /// </summary>
-    public void Start()
+    public void OnEnable()
     {
         UserDataManagerReference = PersistentData.Instance.LoginDataManager;
         StartCoroutine(DownloadFeedbackItems());
@@ -335,9 +284,11 @@ public struct CompiledFeedbackOnSubjectFromSource
         form.AddField("password", UserDataManagerReference.Password);
         form.AddField("courseid", UserDataManagerReference.CourseData.CourseID);
         form.AddField("subject", UserDataManagerReference.SubjectData.SubjectID);
+        form.AddField("date", TestDatePicker);
+
 
         string output = "";
-        using (UnityWebRequest WWW_ = UnityWebRequest.Post(UriMaker.InsertScriptInUri(PersistentData.WebAdress, "PP_GetFeedbackOnSubject.php"), form))
+        using (UnityWebRequest WWW_ = UnityWebRequest.Post(UriMaker.InsertScriptInUri(PersistentData.WebAdress, "PP_GetFeedbackOnSubjectBeforeDate.php"), form))
         {
             yield return WWW_.SendWebRequest();
 
@@ -354,7 +305,7 @@ public struct CompiledFeedbackOnSubjectFromSource
             }
         }
 
-        //Debug.Log($"select t1.* from FeedBackItems t1 inner join ( select max(FeedBackItemID) FeedBackItemID, Parameter from FeedBackItems group by Parameter, FeedbackSuplierID) t2 on t1.Parameter = t2.Parameter and t1.FeedBackItemID = t2.FeedBackItemID WHERE `GroupID` = (SELECT GroupID FROM UserAndCourseRelations WHERE UserID = (SELECT Users.UserID FROM Users WHERE Users.Username = '{UserDataManagerReference.Username}' AND Users.Password = '{UserDataManagerReference.Password}') AND CourseID = '{UserDataManagerReference.CourseData.CourseID}') AND `Subject` = '{UserDataManagerReference.SubjectData.SubjectID}'");
+        Debug.Log($"select t1.* from FeedBackItems t1 inner join ( select max(FeedBackItemID) FeedBackItemID, Parameter from FeedBackItems group by Parameter, FeedbackSuplierID) t2 on t1.Parameter = t2.Parameter and t1.FeedBackItemID = t2.FeedBackItemID WHERE `GroupID` = (SELECT GroupID FROM UserAndCourseRelations WHERE UserID = (SELECT Users.UserID FROM Users WHERE Users.Username = '{UserDataManagerReference.Username}' AND Users.Password = '{UserDataManagerReference.Password}') AND CourseID = '{UserDataManagerReference.CourseData.CourseID}') AND `Subject` = '{UserDataManagerReference.SubjectData.SubjectID}'");
 
         yield return new WaitForEndOfFrame();
         LoadingOverlay.RemoveLoader();
