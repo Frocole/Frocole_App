@@ -41,6 +41,11 @@ public class StudentGroupOverview : MonoBehaviour
     public SubjectSelector GPFRDSelector;
 
     /// <summary>
+    /// The gpfrd selector.
+    /// </summary>
+    public SubjectSelector PFRDSelector;
+
+    /// <summary>
     /// The loading overlay go.
     /// </summary>
     public GameObject LoadingOverlayGO;
@@ -180,6 +185,10 @@ public class StudentGroupOverview : MonoBehaviour
                 GPFRDSelector.ThisSubject.FeedbackType = SpiderGraph.FeedbackType.GPF_RD;
                 GPFRDSelector.ThisSubject.SubjectID = "GPF" + _persistentLoginDataManager.GroupData.GroupID;
                 GPFRDSelector.ThisSubject.SubjectName = _persistentLoginDataManager.GroupData.GroupNickname;
+
+                PFRDSelector.ThisSubject.Contributors = contributors.ToArray();
+                PFRDSelector.ThisSubject.FeedbackType = SpiderGraph.FeedbackType.PF_RD;
+                PFRDSelector.ThisSubject.SubjectID = "PF" + _persistentLoginDataManager.GroupData.GroupID;
             }
         }
 

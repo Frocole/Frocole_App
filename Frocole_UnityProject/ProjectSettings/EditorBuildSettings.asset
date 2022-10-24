@@ -39,6 +39,9 @@ EditorBuildSettings:
     path: Assets/Scenes/C_03_GPF-RD.unity
     guid: 86b86ce443b58404298811f084a33c9b
   - enabled: 1
+    path: Assets/Scenes/C_03_PF-RD.unity
+    guid: d56d01fc71d571f4b96e2d38765fe3fa
+  - enabled: 1
     path: Assets/Scenes/L_01_Home.unity
     guid: 5a4b5b3e5cb0bac44b27385220bdc625
   - enabled: 1

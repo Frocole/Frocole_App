@@ -51,6 +51,11 @@ public class CourseObject
     /// <summary>
     /// A set of up to 10 parameters on which peers can review their collaborative product.
     /// </summary>
+    public string PF_RD_parameters;
+
+    /// <summary>
+    /// A set of up to 10 parameters on which peers can review their collaborative effort.
+    /// </summary>
     public string GPF_RD_parameters;
 
     /// <summary>

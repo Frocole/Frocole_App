@@ -103,10 +103,17 @@ public class SpiderGraph : MonoBehaviour
         /// An enum constant representing the gpf rd option.
         /// </summary>
         GPF_RD,
+
         /// <summary>
         /// An enum constant representing the ipf rd option.
         /// </summary>
-        IPF_RD
+        IPF_RD,
+
+        /// <summary>
+        /// An enum constant representing the ipf rd option.
+        /// </summary>
+        PF_RD
+
     }
 
     #endregion Enumerations
@@ -127,6 +134,11 @@ public class SpiderGraph : MonoBehaviour
             case FeedbackType.IPF_RD:
 
                 AxisNames = MyCourseObject.IPF_RD_parameters.Split('/');
+                break;
+
+            case FeedbackType.PF_RD:
+
+                AxisNames = MyCourseObject.PF_RD_parameters.Split('/');
                 break;
         }
 
