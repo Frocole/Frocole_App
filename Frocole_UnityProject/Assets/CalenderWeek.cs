@@ -10,9 +10,9 @@ public class CalenderWeek : MonoBehaviour
     public Text WeekNR;
     public Text[] Days;
 
-    private string Year = "2020";
-    private string Month = "1";
-    private string Day = "1";
+    [SerializeField] private string Year = "2020";
+    [SerializeField] private string Month = "1";
+    [SerializeField]private string Day = "1";
     public string Date => $"{Year}_{Month}_{Day}";
 
     public FillProfileDate FillProfileDate_RD;
@@ -51,7 +51,7 @@ public class CalenderWeek : MonoBehaviour
 
     public void OnClicked()
     {
-        Debug.Log(Date);
+        Debug.Log(Date + " + " + $"{Year}_{Month}_{Day}");
         FillProfileDate_RD.TestDatePicker = Date;
         DatedGraph.SetActive(true);
     }
