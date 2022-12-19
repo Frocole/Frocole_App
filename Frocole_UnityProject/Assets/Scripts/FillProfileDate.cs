@@ -268,6 +268,12 @@ public class FillProfileDate : MonoBehaviour
         // CompileFeedback();
     }
 
+    public void Refresh()
+    {
+        UserDataManagerReference = PersistentData.Instance.LoginDataManager;
+        StartCoroutine(DownloadFeedbackItems());
+    }
+
     /// <summary>
     /// Downloads the feedback items.
     /// </summary>
