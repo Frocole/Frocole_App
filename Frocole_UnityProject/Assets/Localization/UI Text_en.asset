@@ -498,6 +498,26 @@ MonoBehaviour:
     m_Localized: December
     m_Metadata:
       m_Items: []
+  - m_Id: 162375492521672704
+    m_Localized: my feedback on the product
+    m_Metadata:
+      m_Items: []
+  - m_Id: 162375758079836160
+    m_Localized: average group feedback on the product
+    m_Metadata:
+      m_Items: []
+  - m_Id: 162376030143365120
+    m_Localized: the product rating by the teacher
+    m_Metadata:
+      m_Items: []
+  - m_Id: 162376581035835392
+    m_Localized: my product feedback
+    m_Metadata:
+      m_Items: []
+  - m_Id: 162376773877350400
+    m_Localized: average feedback by the group
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

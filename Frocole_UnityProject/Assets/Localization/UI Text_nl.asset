@@ -498,6 +498,26 @@ MonoBehaviour:
     m_Localized: december
     m_Metadata:
       m_Items: []
+  - m_Id: 162375492521672704
+    m_Localized: mijn feedback op het product
+    m_Metadata:
+      m_Items: []
+  - m_Id: 162375758079836160
+    m_Localized: gemiddelde groepsfeedback op het product
+    m_Metadata:
+      m_Items: []
+  - m_Id: 162376030143365120
+    m_Localized: beoordeling van het product door de leraar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 162376581035835392
+    m_Localized: mijn feedback op het product
+    m_Metadata:
+      m_Items: []
+  - m_Id: 162376773877350400
+    m_Localized: gemiddelde groepsfeedback op het product
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
