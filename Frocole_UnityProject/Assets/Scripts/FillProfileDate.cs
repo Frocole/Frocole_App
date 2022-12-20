@@ -270,7 +270,7 @@ public class FillProfileDate : MonoBehaviour
 
     public void Refresh()
     {
-        if (!gameObject.activeSelf) gameObject.SetActive(true);
+        
          UserDataManagerReference = PersistentData.Instance.LoginDataManager;
         StartCoroutine(DownloadFeedbackItems());
     }
