@@ -2820,6 +2820,10 @@ PrefabInstance:
       propertyPath: IfViewerOnly.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 2555947223236688982, guid: 66ba294e21a062f4990bacf2f137691e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 429
+      objectReference: {fileID: 0}
     - target: {fileID: 2555947224005083150, guid: 66ba294e21a062f4990bacf2f137691e, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -2892,6 +2896,10 @@ PrefabInstance:
       propertyPath: MyProfiles.Array.data[1]
       value: 
       objectReference: {fileID: 623480183}
+    - target: {fileID: 6903693860909167483, guid: 66ba294e21a062f4990bacf2f137691e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 429
+      objectReference: {fileID: 0}
     - target: {fileID: 6903693860962423660, guid: 66ba294e21a062f4990bacf2f137691e, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3249,7 +3257,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -121}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 250}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &887847697

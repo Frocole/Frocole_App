@@ -1778,7 +1778,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6552799018680968370, guid: 563d3680f6b340b47843c32768e88921, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6552799018680968371, guid: 563d3680f6b340b47843c32768e88921, type: 3}
       propertyPath: m_Pivot.x
@@ -2362,6 +2362,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6552799019187798605, guid: 563d3680f6b340b47843c32768e88921, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6552799019207550279, guid: 563d3680f6b340b47843c32768e88921, type: 3}
+      propertyPath: m_Color.a
+      value: 0.6156863
+      objectReference: {fileID: 0}
+    - target: {fileID: 6552799019207550281, guid: 563d3680f6b340b47843c32768e88921, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6552799019237043746, guid: 563d3680f6b340b47843c32768e88921, type: 3}
@@ -3275,7 +3283,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -3}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 250}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1825959889
@@ -3346,7 +3354,6 @@ GameObject:
   - component: {fileID: 1862983152}
   - component: {fileID: 1862983154}
   - component: {fileID: 1862983153}
-  - component: {fileID: 1862983155}
   m_Layer: 5
   m_Name: Legenda
   m_TagString: Untagged
@@ -3415,25 +3422,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1862983151}
   m_CullTransparentMesh: 0
---- !u!114 &1862983155
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1862983151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e42bdba1694646448c4197067c7b199, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _SpiderTranslationItems:
-  - localeKey: C03_L1
-    target: {fileID: 1221044301}
-  - localeKey: C03_L2
-    target: {fileID: 237675806}
-  - localeKey: C03_L3
-    target: {fileID: 1109305925}
 --- !u!224 &1943150217 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6903693860962423660, guid: 66ba294e21a062f4990bacf2f137691e, type: 3}

@@ -132,7 +132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.14117648}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2455,7 +2455,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6552799017717392778}
   m_HandleRect: {fileID: 6552799017717392781}
   m_Direction: 0
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -2583,7 +2583,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 6552799019428113319}
   m_Direction: 0
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.9999995
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2920,8 +2920,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6552799018107456117}
   m_HandleRect: {fileID: 6552799018107456116}
   m_Direction: 2
-  m_Value: 1.0000002
-  m_Size: 0.3333333
+  m_Value: 1
+  m_Size: 0.33333334
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -4450,7 +4450,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 6552799019594226426}
   m_Direction: 0
   m_Value: 1
-  m_Size: 1
+  m_Size: 0.99999994
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -5436,7 +5436,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 6552799018055838458}
   m_Direction: 0
   m_Value: 1
-  m_Size: 0.9999999
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -6162,7 +6162,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 6552799019070063582}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.19298244
+  m_Size: 0.19298245
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -6673,7 +6673,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 6552799019315297508}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.15492956
+  m_Size: 0.15492958
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -7222,7 +7222,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 6552799017803247954}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.3333333
+  m_Size: 0.33333334
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -8155,8 +8155,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6552799019715056537}
   m_HandleRect: {fileID: 6552799019715056536}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.6470588
+  m_Value: 0.99999976
+  m_Size: 0.64705884
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -13826,8 +13826,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0085591, y: 338.5239}
-  m_SizeDelta: {x: 1153.9, y: 1352.6938}
+  m_AnchoredPosition: {x: -0.0085591, y: 400}
+  m_SizeDelta: {x: 1800, y: 1160}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6552799019207550276
 CanvasRenderer:
@@ -13988,8 +13988,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6552799017951410951}
   m_HandleRect: {fileID: 6552799017951410950}
   m_Direction: 0
-  m_Value: 0
-  m_Size: 0.99999964
+  m_Value: 1
+  m_Size: 0.99999994
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
