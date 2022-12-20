@@ -10,16 +10,26 @@ using UnityEngine.UI;
 public class ExtenderScrollView : ScrollRect
 {
 
-    private string[] _values;
+    private int[] _values;
     public UnityEvent OnSelected;
+    private TextMeshProUGUI[] Entries;
+
+    public bool IsYearscroller = false;
+
+    public void SetValue(int value)
+    {
 
 
-    public void SetValues(string[] values)
+
+        normalizedPosition = new Vector2(0, 1 - (float)value / (_values.Length - 1));
+    }
+
+    public void SetValues(int[] values)
     {
         _values = values;
     }
 
-    public string value()
+    public int GetValue()
     {
         int i = Mathf.RoundToInt((1 - normalizedPosition.y) * (_values.Length-1));
         return _values[i];
