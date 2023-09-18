@@ -133,27 +133,27 @@ public class LoginManager : MonoBehaviour
     /// <param name="newURL"> URL of the new. </param>
     public void SetWebAdress(string newURL)
     {
-#if !(UNITY_STANDALONE_WIN || WINDOWS_UWP)
+#if !(UNITY_STANDALONE_WIN || WINDOWS_UWP || UNITY_WEBGL)
         //PersistentData.Instance.SetWebAdress(newURL);
         Debug.Log($"Checking Server Url: {newURL} (onSubmit).");
 
         StartCoroutine(VerifyServer(newURL));
 #endif
-    }
+	}
 
-    /// <summary>
-    /// Ends an edit, Sets web adress.
-    /// 
-    /// Responds to moving focus with tapping/clicking/enter on Windows.
-    /// </summary>
-    ///
-    /// <exception cref="Exception"> Thrown when an exception error condition occurs. </exception>
-    ///
-    /// <param name="input"> The input. </param>
-    public void EndEdit(string input)
+	/// <summary>
+	/// Ends an edit, Sets web adress.
+	/// 
+	/// Responds to moving focus with tapping/clicking/enter on Windows.
+	/// </summary>
+	///
+	/// <exception cref="Exception"> Thrown when an exception error condition occurs. </exception>
+	///
+	/// <param name="input"> The input. </param>
+	public void EndEdit(string input)
     {
-#if UNITY_STANDALONE_WIN || WINDOWS_UWP
-        Debug.Log($"Checking Server Url: {input} (onEndEdit).");
+#if UNITY_STANDALONE_WIN || WINDOWS_UWP || UNITY_WEBGL
+		Debug.Log($"Checking Server Url: {input} (onEndEdit).");
 
         StartCoroutine(VerifyServer(input));
 #endif
@@ -370,9 +370,10 @@ public class LoginManager : MonoBehaviour
         {
             Uri = null;
         }
+       
+		Debug.Log($"Checking Server at '{Uri}'");
 
-
-        if (Uri != null)
+		if (Uri != null)
         {
            string output = "";
             using (UnityWebRequest WWW_ = UnityWebRequest.Post(UriMaker.InsertScriptInUri(newURL, "CheckIfServerExists.php"), form))
